@@ -1,6 +1,6 @@
 @use '../../styles/colors.module.scss' as *;
 
-.container {
+.wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,6 +13,12 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 6.25rem; // 100px
+
+  &[data-footer='true'] {
+    height: 10.3125rem; // 165px
+    border-bottom: none;
+    border-top: $black 0.125rem solid;
+  }
 
   .wrapLogo {
     display: flex;
@@ -47,4 +53,9 @@
       }
     }
   }
+}
+
+.container {
+  height: 1rem;
+  // background-color: $orangeDark;
 }

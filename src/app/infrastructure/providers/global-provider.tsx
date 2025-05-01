@@ -1,4 +1,4 @@
-import Footer from '@/app/presentation/components/footer/footer'
+import HeaderAndFooter from '@/app/presentation/components/footer/header-footer'
 import { createContext, useContext, ReactNode } from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -23,8 +23,7 @@ const GlobalProvider = ({ children }: { children: ReactNode }) => {
 
   return (
     <GlobalContext.Provider value={{}}>
-      <Footer>{children}</Footer>
-      <button onClick={onClick}>Navigate via Provider</button>
+      <HeaderAndFooter>{children}</HeaderAndFooter>
     </GlobalContext.Provider>
   )
 }
