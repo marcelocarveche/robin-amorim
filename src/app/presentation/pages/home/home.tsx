@@ -1,11 +1,7 @@
 import { useGlobalProvider } from '@/app/infrastructure/providers/global-provider'
 
 const HomePage = () => {
-  return (
-    <>
-      <h1>Home Page</h1>
-    </>
-  )
+  return <p>Hi!I am Robin Amorim</p>
 }
 
 export default HomePage

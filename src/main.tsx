@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom/client'
-import './index.css'
+import '@/app/presentation/styles/global.scss'
 import AppRoutes from '@/app/infrastructure/routes/routes'
 import GlobalProvider from '@/app/infrastructure/providers/global-provider'
 import { BrowserRouter } from 'react-router-dom'
