@@ -30,3 +30,33 @@ $white: #ffffff;
 $greyLight: #e2e2e2;
 $grey: #676767;
 $black: #171717;
+
+// Exportar variaveis de cores
+:export {
+  orangeDark: $orangeDark;
+  orangeDefault: $orangeDefault;
+  orangeLight: $orangeLight;
+
+  pinkDark: $pinkDark;
+  pinkDefault: $pinkDefault;
+  pinkLight: $pinkLight;
+
+  blueishDark: $BlueishDark;
+  blueishDefault: $BlueishDefault;
+  blueishLight: $BlueishLight;
+
+  yellowDark: $yellowDark;
+  yellowDefault: $yellowDefault;
+  yellowLight: $yellowLight;
+
+  greenDark: $greenDark;
+  greenDefault: $greenDefault;
+  greenLight: $greenLight;
+
+  offWhite: $offWhite;
+  offGrey: $offGrey;
+  white: $white;
+  greyLight: $greyLight;
+  grey: $grey;
+  black: $black;
+}

@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './footer-styles.module.scss'
+import { MailIcon } from '@/app/presentation/components'
 
 interface FooterProps {
   children?: React.ReactNode
@@ -14,7 +15,9 @@ const Footer: React.FC<FooterProps> = ({ children }) => {
           <span className={styles.lastName}>amorim</span>
         </div>
         <div className={styles.wrapLinks}>
-          <div className={styles.mail}>mail</div>
+          <div className={styles.mail}>
+            <MailIcon />
+          </div>
           <div className={styles.linkedin}>linkedin</div>
         </div>
       </div>

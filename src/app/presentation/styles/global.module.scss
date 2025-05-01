@@ -1,5 +1,5 @@
-@use './components.scss' as comp;
-@use './colors.scss' as *;
+@use './components.module.scss' as comp;
+@use './colors.module.scss' as *;
 
 body {
   margin: 0;

@@ -1,5 +1,5 @@
-@use './fonts.scss' as *;
-@use './colors.scss' as colors;
+@use './fonts.module.scss' as *;
+@use './colors.module.scss' as colors;
 
 @mixin HeadingDefault {
   font-family: 'Vollkorn', serif;
