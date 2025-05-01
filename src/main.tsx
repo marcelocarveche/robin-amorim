@@ -1,17 +1,18 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import Routes from '@/app/infrastructure/routes/routes'
+import AppRoutes from '@/app/infrastructure/routes/routes'
 import GlobalProvider from '@/app/infrastructure/providers/global-provider'
+import { BrowserRouter } from 'react-router-dom'
 
 const rootElement = document.getElementById('root')
 if (rootElement) {
+  console.log('Renderizando aplicação dentro do BrowserRouter')
   ReactDOM.createRoot(rootElement).render(
-    <React.StrictMode>
+    <BrowserRouter>
       <GlobalProvider>
-        <Routes />
+        <AppRoutes />
       </GlobalProvider>
-    </React.StrictMode>
+    </BrowserRouter>
   )
 } else {
   console.error('Root element not found')
