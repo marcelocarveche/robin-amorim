@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/marcelocarveche/robin-amorim/issues"
   },
-  "homepage": "https://github.com/marcelocarveche/robin-amorim#readme",
+  "homepage": "https://github.com/marcelocarveche/robin-amorim",
   "description": "",
   "dependencies": {
     "react": "^19.1.0",
@@ -32,6 +33,7 @@
     "eslint-config-prettier": "^10.1.2",
     "eslint-plugin-prettier": "^5.2.6",
     "eslint-plugin-react": "^7.37.5",
+    "gh-pages": "^6.3.0",
     "prettier": "^3.5.3",
     "vite": "^5.0.0"
   }
