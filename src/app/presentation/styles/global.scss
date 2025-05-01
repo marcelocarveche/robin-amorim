@@ -1,3 +1,6 @@
+@use './components.scss' as comp;
+@use './colors.scss' as *;
+
 body {
   margin: 0;
   padding: 0;
@@ -11,16 +14,6 @@ body {
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: 'Vollkorn';
-  src: url('/fonts/Vollkorn-Regular.ttf') format('truetype');
-  // font-weight: 400;
-  line-height: 100%;
-  font-style: normal;
-}
-
 p {
-  font-family: Vollkorn;
-  color: #000;
-  font-size: 54px;
+  @include comp.Heading1;
 }

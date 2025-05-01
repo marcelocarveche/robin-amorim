@@ -1,0 +1,56 @@
+@use './fonts.scss' as *;
+@use './colors.scss' as colors;
+
+@mixin HeadingDefault {
+  font-family: 'Vollkorn', serif;
+  color: colors.$black;
+  font-weight: 500;
+}
+
+@mixin BodyTextDefault {
+  font-family: 'Vollkorn', serif;
+  color: colors.$black;
+  line-height: 1.75rem; // 28px
+}
+
+@mixin Heading1 {
+  @include HeadingDefault;
+  font-size: 4.5rem; // 72px
+}
+
+@mixin Heading2 {
+  @include HeadingDefault;
+  font-size: 3.375rem; // 54px
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+@mixin Heading3 {
+  @include HeadingDefault;
+  font-size: 2.5rem; // 40px
+}
+
+@mixin Heading4 {
+  @include HeadingDefault;
+  font-size: 1.875rem; // 30px
+}
+
+@mixin Heading5 {
+  @include HeadingDefault;
+  font-size: 1.25rem; // 20px
+}
+
+@mixin BodyText1 {
+  @include BodyTextDefault;
+  font-size: 1.25rem; // 20px
+}
+
+@mixin BodyText3 {
+  @include BodyTextDefault;
+  font-size: 1.125rem; // 18px
+}
+
+@mixin BodyText3 {
+  @include BodyTextDefault;
+  font-size: 1rem; // 16px
+}
