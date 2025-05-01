@@ -1,0 +1,27 @@
+{
+  "name": "robin-amorim",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",          
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcelocarveche/robin-amorim.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Marcelo Carveche",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcelocarveche/robin-amorim/issues"
+  },
+  "homepage": "https://github.com/marcelocarveche/robin-amorim#readme",
+  "description": "",
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
