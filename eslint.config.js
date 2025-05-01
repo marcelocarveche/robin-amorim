@@ -4,19 +4,25 @@ import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 import prettierPlugin from 'eslint-plugin-prettier';
+import tseslint from 'typescript-eslint';
 
 export default [
   js.configs.recommended, // regras base do JavaScript
   {
-    files: ['**/*.js', '**/*.jsx'],
+    files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
+      parser: tseslint.parser,
+      parserOptions: {
+        project: './tsconfig.json',
+      },
       globals: {
         React: true,
       },
     },
     plugins: {
+      '@typescript-eslint': tseslint.plugin,
       react: reactPlugin,
       'react-hooks': reactHooksPlugin,
       'jsx-a11y': jsxA11yPlugin,
