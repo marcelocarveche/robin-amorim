@@ -56,6 +56,9 @@
 }
 
 .container {
-  height: 1rem;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding: 3.125rem 6.25rem; // 50px 50px
   // background-color: $orangeDark;
 }

@@ -1,0 +1,27 @@
+@use '../../styles/colors.module.scss' as *;
+@use '../../styles/components.module.scss' as *;
+
+.container {
+  padding: 2.5rem 0 2.5rem 6.25rem;
+  border: $orangeDark 0.125rem dashed;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: fit-content;
+  column-gap: 2.5rem;
+
+  .presentation {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+    row-gap: 1rem;
+    h1 {
+      @include Heading2;
+    }
+
+    p {
+      @include BodyText1;
+    }
+  }
+}
