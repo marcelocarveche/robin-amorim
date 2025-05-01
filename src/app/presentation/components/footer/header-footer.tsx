@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './header-footer-styles.module.scss'
-import { MailIcon } from '@/app/presentation/components'
+import { MailIcon, LinkedinIcon } from '@/app/presentation/components'
 
 interface Props {
   isFooter?: boolean
@@ -24,10 +24,8 @@ const Component: React.FC<Props> = ({ isFooter = false }) => {
         <span className={styles.lastName}>amorim</span>
       </div>
       <div className={styles.wrapLinks}>
-        <div className={styles.mail}>
-          <MailIcon />
-        </div>
-        <div className={styles.linkedin}>linkedin</div>
+        <MailIcon className={styles.mail} />
+        <LinkedinIcon className={styles.linkedin} />
       </div>
     </div>
   )
