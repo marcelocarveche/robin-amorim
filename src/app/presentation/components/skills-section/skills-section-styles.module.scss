@@ -1,0 +1,54 @@
+@use '../../styles/colors.module.scss' as *;
+@use '../../styles/components.module.scss' as *;
+@use '../../styles/variables.module.scss' as *;
+
+.container {
+  background-color: $offGrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  .content {
+    width: 100%;
+    max-width: $maxWidth;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem; // 32px
+    h2 {
+      @include Heading2;
+    }
+    .cardsWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 1.5rem;
+  background-color: $white;
+  border-radius: 0.5rem; // 8px
+  border: 0.0625rem solid $black;
+  box-shadow: 0.125rem 0.125rem 0 rgba(0, 0, 0, 1);
+
+  .content {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem; // 20px
+    line-height: 1.75rem; // 28px
+    gap: 0.625rem;
+    .title {
+      font-weight: 600;
+    }
+    .description {
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
