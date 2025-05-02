@@ -19,13 +19,15 @@ const HeaderAndFooter: React.FC<any> = ({ children }) => {
 const Component: React.FC<Props> = ({ isFooter = false }) => {
   return (
     <div data-footer={isFooter} className={styles.wrapper}>
-      <div className={styles.wrapLogo}>
-        <span className={styles.firstName}>robin</span>
-        <span className={styles.lastName}>amorim</span>
-      </div>
-      <div className={styles.wrapLinks}>
-        <MailIcon className={styles.mail} />
-        <LinkedinIcon className={styles.linkedin} />
+      <div className={styles.content}>
+        <div className={styles.wrapLogo}>
+          <span className={styles.firstName}>robin</span>
+          <span className={styles.lastName}>amorim</span>
+        </div>
+        <div className={styles.wrapLinks}>
+          <MailIcon className={styles.mail} />
+          <LinkedinIcon className={styles.linkedin} />
+        </div>
       </div>
     </div>
   )

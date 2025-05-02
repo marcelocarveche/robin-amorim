@@ -1,27 +1,36 @@
 @use '../../styles/colors.module.scss' as *;
 @use '../../styles/components.module.scss' as *;
+@use '../../styles/variables.module.scss' as *;
 
 .container {
-  padding: 2.5rem 0 2.5rem 6.25rem;
-  border: $orangeDark 0.125rem dashed;
-  width: auto;
-  height: auto;
+  padding: 5.5rem 6.25rem 2.5rem 6.25rem;
+  //   padding: 3.125rem 6.25rem; // 50px 50px
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  max-width: fit-content;
-  column-gap: 2.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  .presentation {
+  .content {
+    border: $orangeDark 0.125rem dashed;
+    height: auto;
     display: flex;
-    flex-direction: column;
-    padding-top: 4rem;
-    row-gap: 1rem;
-    h1 {
-      @include Heading2;
-    }
+    justify-content: space-between;
+    column-gap: 2.5rem;
+    max-width: $maxWidth;
 
-    p {
-      @include BodyText1;
+    .presentation {
+      display: flex;
+      flex-direction: column;
+      padding-top: 4rem;
+      row-gap: 1rem;
+      h1 {
+        @include Heading2;
+      }
+
+      p {
+        @include BodyText1;
+      }
     }
   }
 }
