@@ -1,0 +1,62 @@
+// Primary color palette
+$orangeDark: #dd6900;
+$orangeDefault: #ff7a02;
+$orangeLight: #ffb674;
+
+// Accent 1 color palette
+$pinkDark: #f196ea;
+$pinkDefault: #f5bff1;
+$pinkLight: #ffdefd;
+
+// Accent 2 color palette
+$BlueishDark: #0e20a2;
+$BlueishDefault: #6779ff;
+$BlueishLight: #bbc3fe;
+
+// Accent 3 color palette
+$yellowDark: #e5b323;
+$yellowDefault: #ffc314;
+$yellowLight: #ffe69e;
+
+// Accent 4 color palette
+$greenDark: #015e14;
+$greenDefault: #03a82d;
+$greenLight: #03a82d;
+
+// Neutral color palette
+$offWhite: #f9f6f2;
+$offGrey: #edefea;
+$white: #ffffff;
+$greyLight: #e2e2e2;
+$grey: #676767;
+$black: #171717;
+
+// Exportar variaveis de cores
+:export {
+  orangeDark: $orangeDark;
+  orangeDefault: $orangeDefault;
+  orangeLight: $orangeLight;
+
+  pinkDark: $pinkDark;
+  pinkDefault: $pinkDefault;
+  pinkLight: $pinkLight;
+
+  blueishDark: $BlueishDark;
+  blueishDefault: $BlueishDefault;
+  blueishLight: $BlueishLight;
+
+  yellowDark: $yellowDark;
+  yellowDefault: $yellowDefault;
+  yellowLight: $yellowLight;
+
+  greenDark: $greenDark;
+  greenDefault: $greenDefault;
+  greenLight: $greenLight;
+
+  offWhite: $offWhite;
+  offGrey: $offGrey;
+  white: $white;
+  greyLight: $greyLight;
+  grey: $grey;
+  black: $black;
+}

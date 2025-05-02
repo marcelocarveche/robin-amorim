@@ -1,0 +1,28 @@
+@use '../../styles/colors.module.scss' as *;
+@use '../../styles/components.module.scss' as *;
+@use '../../styles/variables.module.scss' as *;
+
+.container {
+  .content {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 2.5rem;
+    width: 100%;
+    max-width: $maxWidth;
+
+    .presentation {
+      display: flex;
+      flex-direction: column;
+      padding-top: 4rem;
+      row-gap: 1rem;
+      h1 {
+        @include Heading2;
+      }
+
+      p {
+        @include BodyText1;
+      }
+    }
+  }
+}

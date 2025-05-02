@@ -1,0 +1,75 @@
+@use '../../styles/colors.module.scss' as *;
+@use '../../styles/variables.module.scss' as *;
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+  background: $offWhite;
+  border-bottom: $black 0.125rem solid;
+  height: 4.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6.25rem; // 100px
+
+  &[data-footer='true'] {
+    height: 10.3125rem; // 165px
+    border-bottom: none;
+    border-top: $black 0.125rem solid;
+  }
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: $maxWidth;
+    .wrapLogo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 0.0625rem; // 1px
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 1.25rem;
+      color: $black;
+
+      .firstName {
+        font-weight: 300;
+      }
+
+      .lastName {
+        font-weight: 600;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .wrapLinks {
+      display: flex;
+      gap: 1.5rem; // 24px
+
+      .mail,
+      .linkedin {
+        cursor: pointer;
+        font-size: 1rem;
+        transition: color 0.2s;
+
+        &:hover {
+          color: #00e676;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  min-height: 74vh;
+}
