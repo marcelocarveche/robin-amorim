@@ -40,15 +40,6 @@
           h3 {
             @include Heading3;
           }
-
-          .tagsWrapper {
-            display: flex;
-            gap: 1rem;
-
-            .tag {
-              @include Tag;
-            }
-          }
         }
         .footer {
           .button {
