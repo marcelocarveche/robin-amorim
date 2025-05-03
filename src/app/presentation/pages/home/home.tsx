@@ -1,10 +1,15 @@
-import { HeroSection, SkillsSection } from '@/app/presentation/components'
+import {
+  CaseStudiesSection,
+  HeroSection,
+  SkillsSection,
+} from '@/app/presentation/components'
 
 const HomePage = () => {
   return (
     <>
       <HeroSection />
       <SkillsSection />
+      <CaseStudiesSection />
     </>
   )
 }
