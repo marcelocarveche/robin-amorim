@@ -1,0 +1,18 @@
+@use '../../../../../styles/colors.module.scss' as *;
+
+.container {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+
+  .foreground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    background-color: $BlueishDefault;
+    border-radius: 50%;
+  }
+}
