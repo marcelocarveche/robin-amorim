@@ -52,14 +52,14 @@ const Component: React.FC<Props> = ({ isFooter = false }) => {
         </div>
         <div className={styles.wrapLinks}>
           <MailIcon
-            href="mailto:robin.amorim@outlook.com"
+            href="mailto:me.robinamorim@gmail.com"
             className={styles.mail}
             color={mailColor}
             onMouseEnter={() => setMailColor(getRandomColor())}
             onMouseLeave={() => setMailColor(colors.black)}
           />
           <LinkedinIcon
-            href="https://www.linkedin.com/in/robinamorim/"
+            href="https://www.linkedin.com/in/robin-amorim/"
             className={styles.linkedin}
             color={linkedinColor}
             onMouseEnter={() => setLinkedinColor(getRandomColor())}
