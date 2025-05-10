@@ -5,7 +5,7 @@ type Props = {
   size?: string
 } & React.HTMLAttributes<HTMLOrSVGElement>
 
-export const TriangleIcon: React.FC<Props> = ({
+export const TriangleForm: React.FC<Props> = ({
   color = '#FF7A02',
   size,
   ...props

@@ -1,18 +1,24 @@
 import React from 'react'
 import styles from './reducing-teacher-workload-styles.module.scss'
 import {
+  AddIcon,
   CaseStudiesSection,
+  DeniedIcon,
+  GoalIcon,
   IterationIcon,
   PrototypingIcon,
   SketchingIcon,
   Tags,
-  TriangleIcon,
   UsabilityIcon,
 } from '@/app/presentation/components'
 import { Book } from './components/book/book'
 import {
+  CloverForm,
+  MoonForm,
+  PacmanForm,
   QuestionBaloon,
   ShortCloudForm,
+  TriangleForm,
   WatermelonForm,
 } from '@/app/presentation/components/forms'
 import { LongCloudForm } from '@/app/presentation/components/forms/long-cloud'
@@ -28,6 +34,7 @@ import { Comments, Comment } from './components/comments/comments'
 import { TeacherJean } from './components/teacher-jean/teacher-jean'
 import { TeacherSonia } from './components/teacher-sonia/teacher-sonia'
 import { TeacherLucia } from './components/teacher-lucia/teacher-lucia'
+import { colors } from '@/app/presentation/styles'
 
 type Props = {} & React.HTMLAttributes<HTMLDivElement>
 
@@ -108,10 +115,7 @@ export const ReducingTeacherWorkload: React.FC<Props> = ({ ...props }) => {
 
   // Quando o componente for renderizado deve rolar para baixo da pagina
   React.useEffect(() => {
-    const element = document.querySelector('#reducing-teacher-workload')
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
+    window.scrollTo({ top: 0 })
   }, [])
 
   return (
@@ -289,15 +293,13 @@ export const ReducingTeacherWorkload: React.FC<Props> = ({ ...props }) => {
         </div>
       </section>
       <section className={styles.section_6}>
-        <ShortCloudForm className={styles.form_1} />
-        <LongCloudForm className={styles.form_2} />
         <div className={styles.content}>
           <div className={styles.title}>
             <h2>Learnings & Future Vision</h2>
           </div>
           <div className={styles.cardsWrap}>
-            {new Array(5).fill(0).map((_, index) => (
-              <TriangleIcon
+            {new Array(6).fill(0).map((_, index) => (
+              <TriangleForm
                 key={index}
                 data-index={index}
                 className={styles.triangle}
@@ -309,8 +311,64 @@ export const ReducingTeacherWorkload: React.FC<Props> = ({ ...props }) => {
                 <p>{card.description}</p>
               </div>
             ))}
-            <WatermelonForm className={styles.watermelon} />
+            <MoonForm className={styles.moon} />
           </div>
+        </div>
+      </section>
+      <section className={styles.section_7}>
+        <CloverForm
+          size={216}
+          className={styles.clover}
+          color={colors.pinkDefault}
+        />
+        <PacmanForm className={styles.pacman} />
+        <div className={styles.content}>
+          <div className={styles.title}>
+            <h2>Summary & Conclusion</h2>
+          </div>
+          <div className={styles.cards}>
+            <div className={styles.card}>
+              <div className={styles.head}>
+                <DeniedIcon />
+                <h4>Problem</h4>
+              </div>
+              <p>
+                The workload of editing, <br />
+                and reviewing each child's <br />
+                content was the main <br />
+                reason for churn.
+              </p>
+            </div>
+            <div className={styles.card}>
+              <div className={styles.head}>
+                <GoalIcon />
+                <h4>Goal</h4>
+              </div>
+              <p>
+                Simplify the editing and <br />
+                reviewing of students' <br />
+                stories for teachers.
+              </p>
+            </div>
+            <div className={styles.card}>
+              <div className={styles.head}>
+                <DeniedIcon />
+                <h4>Result</h4>
+              </div>
+              <div>
+                <p>AI integration resulted in:</p>
+                <li>78% reduction in workload.</li>
+                <li>20% customer retention.</li>
+              </div>
+            </div>
+          </div>
+          <p className={styles.text}>
+            By focusing on user needs, leveraging strategic AI integration, and
+            maintaining a rigorous design <br />
+            process, we successfully delivered a solution that not only
+            drastically improved the teacher experience <br />
+            but also created significant business value for Estante Mágica.
+          </p>
         </div>
       </section>
     </>

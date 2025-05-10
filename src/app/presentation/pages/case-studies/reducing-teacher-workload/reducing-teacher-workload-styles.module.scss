@@ -447,7 +447,7 @@ $maxWidth: 65rem;
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      gap: 1.25rem;
+      gap: 3.75rem;
 
       .card {
         background: $white;
@@ -481,31 +481,35 @@ $maxWidth: 65rem;
         z-index: 1;
 
         &[data-index='0'] {
-          top: 0;
-          right: -5rem;
+          top: -2rem;
+          right: 0.5rem;
         }
         &[data-index='1'] {
-          top: 36%;
-          right: 0;
+          top: -2rem;
+          right: -5rem;
         }
         &[data-index='2'] {
-          bottom: 0;
-          right: 0;
+          top: 3.5rem;
+          right: -5rem;
         }
         &[data-index='3'] {
-          top: 0;
-          right: 5.5rem;
+          top: 9rem;
+          right: -5rem;
         }
         &[data-index='4'] {
-          bottom: 0;
-          right: 5.5rem;
+          top: 14.5rem;
+          right: -5rem;
+        }
+        &[data-index='5'] {
+          top: 14.5rem;
+          right: 0.5rem;
         }
       }
 
-      .watermelon {
+      .moon {
         position: absolute;
-        left: -2.75rem;
-        bottom: -4rem;
+        left: -6rem;
+        top: -4rem;
       }
     }
   }
@@ -518,5 +522,70 @@ $maxWidth: 65rem;
     position: absolute;
     bottom: 0;
     left: 0;
+  }
+}
+
+.section_7 {
+  position: relative;
+
+  .clover {
+    position: absolute;
+    top: 0;
+    right: -3rem;
+  }
+  .pacman {
+    position: absolute;
+    bottom: -1.75rem;
+    left: 0;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+
+    .title {
+      h2 {
+        @include Heading2;
+        text-align: center;
+      }
+    }
+
+    .cards {
+      display: flex;
+      gap: 0.9375rem;
+      justify-content: center;
+      align-items: center;
+      .card {
+        padding: 1.5rem;
+        background-color: $white;
+        border-radius: 0.5rem;
+        border: 0.0625rem solid $black;
+        width: 17.625rem;
+        height: 14rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .head {
+          display: flex;
+          gap: 0.75rem;
+          justify-content: flex-start;
+          align-items: center;
+          h4 {
+            @include Heading4;
+            text-align: start;
+          }
+        }
+
+        @include BodyText3;
+      }
+    }
+
+    .text {
+      @include BodyText2;
+      text-align: center;
+    }
   }
 }
