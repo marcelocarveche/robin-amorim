@@ -2,17 +2,23 @@
 
 .container {
   position: relative;
-  width: 10rem;
-  height: 10rem;
+  width: 10.3125rem;
+  height: 10.3125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .foreground {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 10rem;
-    height: 10rem;
-    object-fit: cover;
-    background-color: $BlueishDefault;
-    border-radius: 50%;
+    // Posicionar a imagem no centro
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10.3125rem;
+    height: 10.3125rem;
+    // object-fit: cover;
+    // background-color: $BlueishDefault;
+    // border-radius: 50%;
+    // z-index: 1;
   }
 }

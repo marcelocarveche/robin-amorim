@@ -26,7 +26,7 @@ export const CaseStudiesSection: React.FC<Props> = ({ ...props }) => {
             <div className={styles.body}>
               <p>STARTUP - SASS</p>
               <h3>Reducing Teacher Workload by 70% through AI</h3>
-              <Tags tags={tags} color="grey" />
+              <Tags tags={tags} color="grey" align="start" />
             </div>
             <div className={styles.footer}>
               <button onClick={handleButtonClick} className={styles.button}>
