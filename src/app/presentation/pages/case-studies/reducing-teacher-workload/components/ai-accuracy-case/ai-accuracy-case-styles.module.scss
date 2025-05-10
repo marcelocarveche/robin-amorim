@@ -1,0 +1,78 @@
+@use '../../../../../styles/colors.module.scss' as *;
+@use '../../../../../styles/components.module.scss' as *;
+
+.container {
+  display: flex;
+  gap: 5rem;
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: fit-content;
+    height: 100%;
+
+    h4 {
+      @include Heading4;
+      text-align: start;
+    }
+
+    p {
+      @include BodyText2;
+      text-align: start;
+    }
+  }
+  .wrapper {
+    position: relative;
+    .content {
+      width: 29.5rem;
+      height: 19.5rem;
+
+      .forms_1 {
+        position: absolute;
+        z-index: 1;
+        left: 5.5rem;
+        bottom: -0.5rem;
+        z-index: 3;
+      }
+
+      .forms_2 {
+        position: absolute;
+        z-index: 0;
+        right: -1rem;
+        top: 3.5rem;
+        z-index: 1;
+      }
+
+      .image_1 {
+        z-index: 1;
+        position: absolute;
+        padding: 2rem;
+        @include Card;
+        background-color: #d7d4e3;
+      }
+
+      .image_2 {
+        @include Card;
+        background-color: #d7d4e3;
+        position: absolute;
+        padding: 1.25rem 1rem 4rem 1rem;
+        right: 0;
+        bottom: 0rem;
+        z-index: 2;
+        .imagesWrap {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          width: fit-content;
+          .img21 {
+            position: absolute;
+            right: 0.1rem;
+            bottom: -3rem;
+          }
+        }
+      }
+    }
+  }
+}

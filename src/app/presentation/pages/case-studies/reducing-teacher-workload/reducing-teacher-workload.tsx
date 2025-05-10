@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './reducing-teacher-workload-styles.module.scss'
 import {
+  CaseStudiesSection,
   IterationIcon,
   PrototypingIcon,
   SketchingIcon,
@@ -16,6 +17,16 @@ import {
 import { LongCloudForm } from '@/app/presentation/components/forms/long-cloud'
 import { TeacherEliana } from './components/teacher-eliana/teacher-eliana'
 import { TeacherMarcia } from './components/teacher-marcia/teacher-marcia'
+import { Forms } from '@/app/presentation/components/case-studies-section/components/forms/forms'
+import { SpeechToTextCase } from './components/speech-to-text-case/speech-to-text-case'
+import { ReviewSuggestionsCase } from './components/review-suggestion-case/review-suggestions-case'
+import { AIAccuracyCase } from './components/ai-accuracy-case/ai-accuracy-case'
+import { CostMonitoringCase } from './components/cost-monitoring-case/cost-monitoring-case'
+import { BusinessImpactItems } from './components/business-impact-items/business-impact-items'
+import { Comments, Comment } from './components/comments/comments'
+import { TeacherJean } from './components/teacher-jean/teacher-jean'
+import { TeacherSonia } from './components/teacher-sonia/teacher-sonia'
+import { TeacherLucia } from './components/teacher-lucia/teacher-lucia'
 
 type Props = {} & React.HTMLAttributes<HTMLDivElement>
 
@@ -40,6 +51,51 @@ export const ReducingTeacherWorkload: React.FC<Props> = ({ ...props }) => {
         "Teachers fear errors in the book are linked to their work's quality.",
     },
   ]
+
+  const challengeComments: Array<Comment> = [
+    {
+      profile: <TeacherEliana />,
+      message:
+        "“This is so much work!! I lost my entire weekend typing each child's text!”",
+      author: 'Eliana, Teacher',
+    },
+    {
+      profile: <TeacherMarcia />,
+      message:
+        '“I had to ask my family to help me review the books. Yet some errors slip through.”',
+      author: 'Marcia, school manager',
+    },
+  ]
+
+  const businessImpactComments: Array<Comment> = [
+    {
+      profile: <TeacherJean />,
+      message:
+        "“It used to take me 5 days to type the texts. \nThis time, I dictated all the students' texts in 1 hour! It was so fast!”",
+      author: 'Jean, 1ST GRADE TEACHER',
+    },
+    {
+      profile: <TeacherLucia />,
+      message:
+        "“The AI was the best thing in the year! It gave me confidence, but I still feel like the final book was 'mine' because I approved the changes.”",
+      author: 'LUCIA, 4TH GRADE TEACHER',
+    },
+    {
+      profile: <TeacherSonia />,
+      message:
+        "“I have students who can't write, so they dictated their own stories. They felt actively engaged in the project.It was so rewarding to empower them!”",
+      author: 'SONIA, 2TH GRADE TEACHER',
+    },
+  ]
+
+  // Quando o componente for renderizado deve rolar para baixo da pagina
+  React.useEffect(() => {
+    const element = document.querySelector('#reducing-teacher-workload')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }, [])
+
   return (
     <>
       <section className={styles.section_1} {...props}>
@@ -102,26 +158,7 @@ export const ReducingTeacherWorkload: React.FC<Props> = ({ ...props }) => {
             </p>
           </div>
           <div className={styles.body}>
-            <div className={styles.comment_1}>
-              <TeacherEliana />
-              <div className={styles.comment_wrap}>
-                <div className={styles.text}>
-                  “This is so much work!! <br />I lost my entire weekend typing
-                  each child's text!”
-                </div>
-                <p className={styles.name}>Eliana, Teacher</p>
-              </div>
-            </div>
-            <div className={styles.comment_2}>
-              <div className={styles.comment_wrap}>
-                <div className={styles.text}>
-                  “I had to ask my family to help me review the books. <br />
-                  Yet some errors slip through.”
-                </div>
-                <p className={styles.name}>Marcia, school manager</p>
-              </div>
-              <TeacherMarcia />
-            </div>
+            <Comments comments={challengeComments} />
           </div>
         </div>
       </section>
@@ -201,6 +238,36 @@ export const ReducingTeacherWorkload: React.FC<Props> = ({ ...props }) => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section className={styles.section_4}>
+        <div className={styles.content}>
+          <div className={styles.header}>
+            <h2>Implementing Assistive Intelligence</h2>
+            <p>
+              Based on research insights, I designed a user flow and interface
+              that integrates AI capabilities (Speech-to-Text, and Review)
+              seamlessly into the existing editing experience, minimizing
+              cognitive load and maximizing efficiency.
+            </p>
+          </div>
+          <div className={styles.casesWrap}>
+            <SpeechToTextCase />
+            <ReviewSuggestionsCase />
+            <AIAccuracyCase />
+            <CostMonitoringCase />
+          </div>
+        </div>
+      </section>
+      <section className={styles.section_5}>
+        <div className={styles.content}>
+          <div className={styles.title}>
+            <h2>
+              Quantifiable Results & <br /> Business Impact
+            </h2>
+          </div>
+          <BusinessImpactItems />
+          <Comments comments={businessImpactComments} />
         </div>
       </section>
     </>

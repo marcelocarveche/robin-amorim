@@ -7,6 +7,10 @@ export * from './icons/usability'
 export * from './icons/sketching'
 export * from './icons/iteration'
 export * from './icons/prototyping'
+export * from './icons/assistant'
+export * from './icons/heart-user'
+export * from './icons/microfone'
+export * from './icons/workload'
 
 // Components
 export * from './hero-photo/hero-photo'
