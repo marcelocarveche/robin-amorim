@@ -11,6 +11,7 @@ export * from './icons/assistant'
 export * from './icons/heart-user'
 export * from './icons/microfone'
 export * from './icons/workload'
+export * from './icons/triangle'
 
 // Components
 export * from './hero-photo/hero-photo'

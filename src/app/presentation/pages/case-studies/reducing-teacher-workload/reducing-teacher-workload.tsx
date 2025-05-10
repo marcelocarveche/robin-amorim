@@ -6,6 +6,7 @@ import {
   PrototypingIcon,
   SketchingIcon,
   Tags,
+  TriangleIcon,
   UsabilityIcon,
 } from '@/app/presentation/components'
 import { Book } from './components/book/book'
@@ -49,6 +50,23 @@ export const ReducingTeacherWorkload: React.FC<Props> = ({ ...props }) => {
       title: 'Perception',
       description:
         "Teachers fear errors in the book are linked to their work's quality.",
+    },
+  ]
+  const learningsCards = [
+    {
+      title: 'Learning Lesson 1',
+      description:
+        'Learning about AI capabilities and translating them into an usable interface was a challenge that required close cross-functional collaboration.',
+    },
+    {
+      title: 'Learning Lesson 2',
+      description:
+        "Another learning was the need for rigorous, iterative usability testing to fine-tune the AI's assistance level and ensure that user trust and autonomy were maintained. ",
+    },
+    {
+      title: 'Future Vision',
+      description:
+        "Future iterations could explore personalized AI suggestions for illustration improvement, enhancing the assistant's effectiveness and user satisfaction.",
     },
   ]
 
@@ -268,6 +286,31 @@ export const ReducingTeacherWorkload: React.FC<Props> = ({ ...props }) => {
           </div>
           <BusinessImpactItems />
           <Comments comments={businessImpactComments} />
+        </div>
+      </section>
+      <section className={styles.section_6}>
+        <ShortCloudForm className={styles.form_1} />
+        <LongCloudForm className={styles.form_2} />
+        <div className={styles.content}>
+          <div className={styles.title}>
+            <h2>Learnings & Future Vision</h2>
+          </div>
+          <div className={styles.cardsWrap}>
+            {new Array(5).fill(0).map((_, index) => (
+              <TriangleIcon
+                key={index}
+                data-index={index}
+                className={styles.triangle}
+              />
+            ))}
+            {learningsCards.map((card, index) => (
+              <div key={index} className={styles.card}>
+                <h4>{card.title}</h4>
+                <p>{card.description}</p>
+              </div>
+            ))}
+            <WatermelonForm className={styles.watermelon} />
+          </div>
         </div>
       </section>
     </>
