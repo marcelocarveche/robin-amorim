@@ -55,7 +55,7 @@
 }
 
 @mixin Card {
-  background-color: colors.$white;
+  background-color: colors.$offWhite;
   border-radius: 0.5rem; // 8px
   border: 0.0625rem solid colors.$black;
   box-shadow: 0.125rem 0.125rem 0 rgba(0, 0, 0, 1);
