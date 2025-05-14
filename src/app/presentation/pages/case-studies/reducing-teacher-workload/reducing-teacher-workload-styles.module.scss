@@ -224,7 +224,7 @@ $maxWidth: 65rem;
         gap: 1.25rem;
 
         .card {
-          background: $white;
+          background: $offWhite;
           border: 0.0625rem solid $grey;
           padding: 1.5rem;
           display: flex;
@@ -305,7 +305,7 @@ $maxWidth: 65rem;
 
         .card {
           @include Card;
-          background-color: $white;
+          background-color: $offWhite;
           width: 15.75rem;
           display: flex;
           gap: 1rem;
@@ -450,7 +450,7 @@ $maxWidth: 65rem;
       gap: 3.75rem;
 
       .card {
-        background: $white;
+        background-color: $offWhite;
         border: 0.0625rem solid $grey;
         padding: 1.5rem;
         display: flex;
@@ -559,7 +559,7 @@ $maxWidth: 65rem;
       align-items: center;
       .card {
         padding: 1.5rem;
-        background-color: $white;
+        background-color: $offWhite;
         border-radius: 0.5rem;
         border: 0.0625rem solid $black;
         width: 17.625rem;

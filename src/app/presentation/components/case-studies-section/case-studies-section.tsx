@@ -27,7 +27,7 @@ export const CaseStudiesSection: React.FC<Props> = ({ ...props }) => {
               <p>STARTUP - SASS</p>
               <h3>
                 Reducing Teacher Workload <br />
-                by 70% through AI
+                by 78% through AI
               </h3>
               <Tags tags={tags} color="grey" align="start" />
             </div>

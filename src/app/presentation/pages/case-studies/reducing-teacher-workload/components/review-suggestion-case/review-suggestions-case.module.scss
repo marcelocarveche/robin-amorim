@@ -41,6 +41,9 @@
         padding: 1.5rem 1.5rem 0 0;
         @include Card;
         background-color: #d7d4e3;
+        img {
+          width: 26.5rem;
+        }
       }
 
       .image_2 {
@@ -51,6 +54,9 @@
         right: 0;
         bottom: 0rem;
         z-index: 2;
+        img {
+          width: 9.5rem;
+        }
       }
 
       .forms_2 {

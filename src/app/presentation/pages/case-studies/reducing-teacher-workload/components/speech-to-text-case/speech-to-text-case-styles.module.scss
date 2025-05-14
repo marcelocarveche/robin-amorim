@@ -41,6 +41,9 @@
         padding: 0.75rem 0 0 0.75rem;
         @include Card;
         background-color: #d7d4e3;
+        img {
+          width: 28rem;
+        }
       }
 
       .speechToTextCase2 {
@@ -51,6 +54,9 @@
         right: 0;
         bottom: 0rem;
         z-index: 2;
+        img {
+          width: 20rem;
+        }
       }
 
       .forms_2 {

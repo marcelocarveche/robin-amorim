@@ -15,17 +15,17 @@ export const BusinessImpactItems: React.FC<Props> = ({ ...props }) => {
       icon: <WorkloadIcon />,
       title: 'Workload Reduction',
       description:
-        '70% Reduction in the average time teachers spent reviewing and editing student stories.',
+        '78% Reduction in the average time teachers spent reviewing and editing student stories.',
     },
     {
       icon: <HeartUserIcon />,
-      title: 'Churn Reduction',
+      title: 'Customer Retention',
       description:
-        '43% Reduction in teacher churn rate, impacting directly on retention and business health.',
+        '20% increase in Customer retention, impacting directly on business health.',
     },
     {
       icon: <MicrofoneIcon />,
-      title: 'Speech-to-Text Feature',
+      title: 'Speech-to-Text Usage',
       description:
         '+115,000 books created through AI-supported speech-to-text feature. ',
     },

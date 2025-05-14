@@ -44,11 +44,10 @@ const Component: React.FC<Props> = ({ isFooter = false }) => {
           onMouseEnter={() => seLogoColor(getRandomColor())}
           onMouseLeave={() => seLogoColor(colors.black)}
           onClick={() => navigate('/')}
+          style={{ color: logoColor }}
         >
           <span className={styles.firstName}>robin</span>
-          <span style={{ color: logoColor }} className={styles.lastName}>
-            amorim
-          </span>
+          <span className={styles.lastName}>amorim</span>
         </div>
         <div className={styles.wrapLinks}>
           <MailIcon

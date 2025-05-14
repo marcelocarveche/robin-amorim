@@ -9,8 +9,8 @@ export const HeroSection: React.FC<Props> = ({ ...props }) => {
         <div className={styles.presentation}>
           <h1>Hi! I’m Robin Amorim</h1>
           <p>
-            Senior UX/UI Designer with PhD in Engineering, 10 years of Startup
-            experience and AI expertise.
+            Senior UX/UI Designer with PhD in Engineering, 10 years <br />
+            of Startup experience and AI expertise.
           </p>
         </div>
         <HeroPhoto />

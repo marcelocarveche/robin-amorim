@@ -15,10 +15,15 @@ export const Comments: React.FC<Props> = ({ comments, ...props }) => {
   return (
     <div className={styles.container} {...props}>
       {comments.map((comment, index) => (
-        <div className={styles.commentWrap}>
+        <div className={styles.commentWrap} key={index}>
           {comment.profile}
           <div className={styles.textWrap}>
-            <p className={styles.message}>{comment.message}</p>
+            <p
+              className={styles.message}
+              dangerouslySetInnerHTML={{
+                __html: comment.message.replace(/\n/g, '<br/>'),
+              }}
+            />
             <p className={styles.author}>{comment.author}</p>
           </div>
         </div>

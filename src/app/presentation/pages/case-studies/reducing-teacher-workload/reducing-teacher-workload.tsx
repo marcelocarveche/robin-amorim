@@ -8,6 +8,7 @@ import {
   IterationIcon,
   PrototypingIcon,
   SketchingIcon,
+  StarIcon,
   Tags,
   UsabilityIcon,
 } from '@/app/presentation/components'
@@ -96,7 +97,7 @@ export const ReducingTeacherWorkload: React.FC<Props> = ({ ...props }) => {
     {
       profile: <TeacherJean />,
       message:
-        "“It used to take me 5 days to type the texts. \nThis time, I dictated all the students' texts in 1 hour! It was so fast!”",
+        "“It used to take me 5 days to type the texts. This time, I dictated all the students' texts in 1 hour! \nIt was so fast!”",
       author: 'Jean, 1ST GRADE TEACHER',
     },
     {
@@ -152,14 +153,14 @@ export const ReducingTeacherWorkload: React.FC<Props> = ({ ...props }) => {
               <div className={styles.paragraphy}>
                 <p>
                   Estante Mágica is the main K-12 SaaS Edtech in Latin America.
+                  <br />
                   At Estante Mágica's platform, teachers faced significant
                   frustration and time loss manually editing student storybooks.
                 </p>
                 <p>
                   As the lead UX Designer on this initiative, I leveraged AI and
                   user-centered design to create an assistive editing experience
-                  that reduced teacher workload by a proven 70%, directly
-                  impacting platform retention
+                  that reduced teacher workload by a proven 78%, directly
                 </p>
               </div>
             </div>
@@ -191,8 +192,8 @@ export const ReducingTeacherWorkload: React.FC<Props> = ({ ...props }) => {
               <h2>The Objective</h2>
               <p>
                 Design and implement a solution to drastically reduce teacher
-                effort in the editing workflow, increasing teacher satisfaction
-                and retention on the platform.
+                effort in the editing workflow, <br />
+                increasing teacher satisfaction and retention on the platform.
               </p>
             </div>
             <div className={styles.hypothesis}>
@@ -233,7 +234,7 @@ export const ReducingTeacherWorkload: React.FC<Props> = ({ ...props }) => {
               <p>
                 These insights, validated through interviews, survey, and data
                 analysis, guided the design strategy towards an assistive,
-                intuitive experience. <br /> Our iterative design process
+                intuitive experience. <br /> My iterative design process
                 included:
               </p>
             </div>
@@ -352,13 +353,13 @@ export const ReducingTeacherWorkload: React.FC<Props> = ({ ...props }) => {
             </div>
             <div className={styles.card}>
               <div className={styles.head}>
-                <DeniedIcon />
+                <StarIcon />
                 <h4>Result</h4>
               </div>
               <div>
                 <p>AI integration resulted in:</p>
                 <li>78% reduction in workload.</li>
-                <li>20% customer retention.</li>
+                <li>20% increase in customer retention.</li>
               </div>
             </div>
           </div>
