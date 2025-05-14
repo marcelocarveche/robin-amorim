@@ -15,6 +15,8 @@ import CostMonitoringCaseImg from './cost-monitoring-case.png'
 import TeacherJean from './teacher-jean.png'
 import TeacherLucia from './teacher-lucia.png'
 import TeacherSonia from './teacher-sonia.png'
+import EcommerceExperience1 from './ecommerce-experience-case-1.png'
+import EcommerceExperience2 from './ecommerce-experience-case-2.png'
 
 export const Assets = {
   HeroPhoto,
@@ -34,4 +36,6 @@ export const Assets = {
   TeacherJean,
   TeacherLucia,
   TeacherSonia,
+  EcommerceExperience1,
+  EcommerceExperience2,
 }

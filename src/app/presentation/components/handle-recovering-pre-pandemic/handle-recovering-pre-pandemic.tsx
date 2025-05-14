@@ -1,44 +1,37 @@
 import React from 'react'
-import styles from './case-studies-section-styles.module.scss'
-import { Forms } from './components/forms/forms'
+import styles from './handle-recovering-pre-pandemic-styles.module.scss'
+import { Images } from './components/forms/images'
 import { useNavigate } from 'react-router-dom'
 import { Routes } from '@/app/presentation/protocols/routes'
 import { Tags } from '../tags/tags'
 
 type Props = {} & React.HTMLAttributes<HTMLElement>
 
-export const CaseStudiesSection: React.FC<Props> = ({ ...props }) => {
+export const HandleRecoveringPrePandemic: React.FC<Props> = ({ ...props }) => {
   const navigate = useNavigate()
 
-  const tags = ['web responsible', 'app', 'research', 'ux/ui design']
-
-  const handleButtonClick = () => {
-    navigate(Routes.caseStudies.reducingTeacherWorkload)
-  }
+  const tags = ['web responsible', 'research', 'ux/ui design']
 
   return (
-    <section className={styles.container} {...props}>
+    <div className={styles.container} {...props}>
       <div className={styles.content}>
-        <h2>Case Studies</h2>
         <div className={styles.body}>
-          <Forms />
+          <Images />
           <div className={styles.content}>
             <div className={styles.body}>
               <p>STARTUP - SASS</p>
               <h3>
-                Reducing Teacher Workload <br />
-                by 78% through AI
+                Recovering pre-pandemic revenue by revamping <br />
+                e-commerce experience
               </h3>
               <Tags tags={tags} color="grey" align="start" />
             </div>
             <div className={styles.footer}>
-              <button onClick={handleButtonClick} className={styles.button}>
-                See Case Study
-              </button>
+              <button className={styles.button}>Coming Soon</button>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   )
 }

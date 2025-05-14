@@ -1,0 +1,51 @@
+@use '../../../../styles/colors.module.scss' as *;
+@use '../../../../styles/components.module.scss' as *;
+
+.wrapper {
+  position: relative;
+  .content {
+    width: 31rem;
+    height: 25.5rem;
+    .forms_1 {
+      position: absolute;
+      z-index: 0;
+      left: -6rem;
+      top: 2rem;
+    }
+
+    .bookCard {
+      position: absolute;
+      z-index: 1;
+      img {
+        width: 30rem;
+      }
+    }
+
+    .suggestionsCard {
+      position: absolute;
+
+      left: -4rem;
+      bottom: 2rem;
+      z-index: 2;
+      img {
+        width: 8.375rem;
+      }
+    }
+
+    .forms_2 {
+      position: absolute;
+      z-index: 0;
+      right: -4rem;
+      bottom: 3rem;
+    }
+
+    .audioRecorderCard {
+      position: absolute;
+      padding: 0.85rem 0.75rem 0.4rem 0.75rem;
+      @include Card;
+      left: -0.25rem;
+      bottom: 0.1rem;
+      z-index: 2;
+    }
+  }
+}

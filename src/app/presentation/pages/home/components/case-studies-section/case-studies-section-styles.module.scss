@@ -1,0 +1,30 @@
+@use '../../../../styles/colors.module.scss' as *;
+@use '../../../../styles/components.module.scss' as *;
+@use '../../../../styles/variables.module.scss' as *;
+
+.section {
+  .content {
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    // width: 100%;
+    max-width: $maxWidth;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      @include Heading2;
+      width: 100%;
+    }
+
+    .caseStudies {
+      display: flex;
+      flex-direction: column;
+
+      gap: 13.125rem;
+    }
+  }
+}

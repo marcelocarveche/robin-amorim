@@ -1,12 +1,12 @@
 import React from 'react'
-import styles from './forms-styles.module.scss'
+import styles from './images-styles.module.scss'
 import { Assets } from '@/app/presentation/assets'
 import { colors } from '@/app/presentation/styles'
 import { SuggestionsForm } from '../../../forms'
 
 type Props = {} & React.HTMLAttributes<HTMLDivElement>
 
-export const Forms: React.FC<Props> = ({ ...props }) => {
+export const Images: React.FC<Props> = ({ ...props }) => {
   return (
     <div className={styles.wrapper} {...props}>
       <div className={styles.content}>
