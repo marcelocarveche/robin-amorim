@@ -44,22 +44,21 @@ const Component: React.FC<Props> = ({ isFooter = false }) => {
           onMouseEnter={() => seLogoColor(getRandomColor())}
           onMouseLeave={() => seLogoColor(colors.black)}
           onClick={() => navigate('/')}
+          style={{ color: logoColor }}
         >
           <span className={styles.firstName}>robin</span>
-          <span style={{ color: logoColor }} className={styles.lastName}>
-            amorim
-          </span>
+          <span className={styles.lastName}>amorim</span>
         </div>
         <div className={styles.wrapLinks}>
           <MailIcon
-            href="mailto:robin.amorim@outlook.com"
+            href="mailto:me.robinamorim@gmail.com"
             className={styles.mail}
             color={mailColor}
             onMouseEnter={() => setMailColor(getRandomColor())}
             onMouseLeave={() => setMailColor(colors.black)}
           />
           <LinkedinIcon
-            href="https://www.linkedin.com/in/robinamorim/"
+            href="https://www.linkedin.com/in/robin-amorim/"
             className={styles.linkedin}
             color={linkedinColor}
             onMouseEnter={() => setLinkedinColor(getRandomColor())}

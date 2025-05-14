@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './skills-section-styles.module.scss'
 import { AddIcon, RemoveIcon } from '@/app/presentation/components'
+import { colors } from '../../styles'
 type Props = {} & React.HTMLAttributes<HTMLElement>
 
 export const SkillsSection: React.FC<Props> = ({ ...props }) => {
@@ -52,6 +53,49 @@ export const SkillsSection: React.FC<Props> = ({ ...props }) => {
       <div className={styles.content}>
         <h2>Beyond UX/UI</h2>
         <div className={styles.cardsWrapper}>
+          <svg
+            className={styles.forms_1}
+            width="76"
+            height="67"
+            viewBox="0 0 76 67"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M41.7336 66.8583L0.869284 5.13312L75.4677 0.405973L41.7336 66.8583Z"
+              fill={colors.blueishDark}
+            />
+          </svg>
+          <svg
+            className={styles.forms_2}
+            width="202"
+            height="203"
+            viewBox="0 0 202 203"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="100.614"
+              cy="101.472"
+              r="72"
+              transform="rotate(36.16 100.614 101.472)"
+              fill={colors.pinkDefault}
+            />
+          </svg>
+          <svg
+            className={styles.forms_3}
+            width="124"
+            height="123"
+            viewBox="0 0 124 123"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20.1794 122.539C-7.43285 93.9246 -6.62049 48.344 21.9939 20.7317C50.6082 -6.88051 96.1888 -6.06815 123.801 22.5462L20.1794 122.539Z"
+              fill={colors.blueishDefault}
+            />
+          </svg>
+
           {skills.map((skill, index) => (
             <SkillCard
               key={index}

@@ -8,25 +8,49 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+
   .content {
     width: 100%;
     max-width: $maxWidth;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: auto;
     gap: 2rem; // 32px
+
     h2 {
       @include Heading2;
     }
     .cardsWrapper {
+      position: relative;
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 2rem;
+      margin-bottom: 6rem;
+      .forms_1,
+      .forms_2,
+      .forms_3 {
+        position: absolute;
+        z-index: 0;
+      }
+      .forms_1 {
+        right: -2.8rem;
+        top: 5.5rem;
+      }
+      .forms_2 {
+        left: -4rem;
+        top: 19rem;
+      }
+      .forms_3 {
+        right: -4.4rem;
+        top: 30rem;
+      }
     }
   }
 }
 
 .wrapper {
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
