@@ -1,5 +1,9 @@
 $maxWidth: 70rem; // 1500px
+$tabletBrekpoint: 900px;
+$mobileBreakpoint: 400px;
 
 :export {
   maxWidth: $maxWidth;
+  mobileBreakpoint: $mobileBreakpoint;
+  tabletBreakpoint: $tabletBrekpoint;
 }

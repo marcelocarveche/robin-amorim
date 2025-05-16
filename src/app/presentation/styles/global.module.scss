@@ -1,11 +1,14 @@
 @use './components.module.scss' as comp;
 @use './colors.module.scss' as *;
+@use './variables.module.scss' as *;
 
 body {
   margin: 0;
   padding: 0;
   background-color: $offWhite;
   text-rendering: optimizeLegibility;
+  width: 100vw !important;
+  overflow-x: hidden; // impede scroll horizontal
 }
 
 .root {
@@ -13,6 +16,7 @@ body {
   flex-direction: column;
   // justify-content: space-between;
   min-height: 100vh;
+  overflow-x: hidden; // opcional, reforça o bloqueio
 }
 
 * {
@@ -28,4 +32,13 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: $tabletBrekpoint) {
+  html {
+    font-size: 0.75rem;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
 }

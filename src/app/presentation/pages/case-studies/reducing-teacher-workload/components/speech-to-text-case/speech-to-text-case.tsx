@@ -23,32 +23,34 @@ export const SpeechToTextCase: React.FC<Props> = ({ ...props }) => {
       </div>
       <div className={styles.wrapper}>
         <div className={styles.content}>
-          <svg
-            className={styles.forms_1}
-            width="74"
-            height="80"
-            viewBox="0 0 74 80"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0.202517 23.6922C15.5368 11.0367 38.2271 13.2082 50.8826 28.5424C63.5382 43.8767 61.3667 66.567 46.0324 79.2226L0.202517 23.6922Z"
-              fill="#FF7A02"
-            />
-          </svg>
+          <div className={styles.forms_1}>
+            <svg
+              width="100%"
+              height="auto"
+              viewBox="0 0 74 80"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.202517 23.6922C15.5368 11.0367 38.2271 13.2082 50.8826 28.5424C63.5382 43.8767 61.3667 66.567 46.0324 79.2226L0.202517 23.6922Z"
+                fill="#FF7A02"
+              />
+            </svg>
+          </div>
           <div className={styles.speechToTextCase1}>
             <img src={Assets.SpeecToTextCase1} alt="SpeecToTextCase1.png" />
           </div>
-          <svg
-            className={styles.forms_2}
-            width="72"
-            height="72"
-            viewBox="0 0 72 72"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M52.7671 72L0 20.0816L72 0L52.7671 72Z" fill="#DD6900" />
-          </svg>
+          <div className={styles.forms_2}>
+            <svg
+              width="100%"
+              height="auto"
+              viewBox="0 0 72 72"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M52.7671 72L0 20.0816L72 0L52.7671 72Z" fill="#DD6900" />
+            </svg>
+          </div>
           <div className={styles.speechToTextCase2}>
             <img src={Assets.SpeecToTextCase2} alt="SpeecToTextCase2" />
           </div>

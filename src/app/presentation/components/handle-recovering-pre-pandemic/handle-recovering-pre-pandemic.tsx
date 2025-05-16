@@ -4,33 +4,55 @@ import { Images } from './components/forms/images'
 import { useNavigate } from 'react-router-dom'
 import { Routes } from '@/app/presentation/protocols/routes'
 import { Tags } from '../tags/tags'
+import { useIsMobile } from '@/app/infrastructure/providers/mobile-provider'
+import { Button } from '../button/button'
 
 type Props = {} & React.HTMLAttributes<HTMLElement>
 
 export const HandleRecoveringPrePandemic: React.FC<Props> = ({ ...props }) => {
-  const navigate = useNavigate()
-
+  const isMobile = useIsMobile()
   const tags = ['web responsible', 'research', 'ux/ui design']
 
   return (
     <div className={styles.container} {...props}>
       <div className={styles.content}>
-        <div className={styles.body}>
-          <Images />
-          <div className={styles.content}>
-            <div className={styles.body}>
-              <p>STARTUP - SASS</p>
-              <h3>
-                Recovering pre-pandemic revenue by revamping <br />
-                e-commerce experience
-              </h3>
-              <Tags tags={tags} color="grey" align="start" />
-            </div>
-            <div className={styles.footer}>
-              <button className={styles.button}>Coming Soon</button>
+        {isMobile ? (
+          <div className={styles.body}>
+            <div className={styles.content}>
+              <div className={styles.body}>
+                <p>STARTUP - SAAS</p>
+                <h3>
+                  Recovering pre-
+                  <br />
+                  pandemic revenue by revamping <br />
+                  e-commerce experience
+                </h3>
+                <Tags tags={tags} color="grey" align="start" />
+              </div>
+              <Images />
+              <div className={styles.footer}>
+                <Button>Coming Soon</Button>
+              </div>
             </div>
           </div>
-        </div>
+        ) : (
+          <div className={styles.body}>
+            <Images />
+            <div className={styles.content}>
+              <div className={styles.body}>
+                <p>STARTUP - SASS</p>
+                <h3>
+                  Recovering pre-pandemic revenue by revamping <br />
+                  e-commerce experience
+                </h3>
+                <Tags tags={tags} color="grey" align="start" />
+              </div>
+              <div className={styles.footer}>
+                <Button>Coming Soon</Button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )

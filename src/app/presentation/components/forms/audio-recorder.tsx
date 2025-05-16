@@ -10,8 +10,8 @@ export const AudioRecorderForm: React.FC<Props> = ({
 }) => {
   return (
     <svg
-      width="422"
-      height="52"
+      width="100%"
+      height="auto"
       viewBox="0 0 422 52"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

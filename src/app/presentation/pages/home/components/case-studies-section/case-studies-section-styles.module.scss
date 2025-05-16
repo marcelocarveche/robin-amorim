@@ -8,12 +8,13 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    // width: 100%;
+    width: 100%;
     max-width: $maxWidth;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 90rem;
 
     h2 {
       @include Heading2;
@@ -23,8 +24,26 @@
     .caseStudies {
       display: flex;
       flex-direction: column;
-
       gap: 13.125rem;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 68.75rem) {
+  .section {
+    .content {
+      h2 {
+        @include Heading3;
+        width: 100%;
+        padding: 2rem 0;
+      }
+
+      .caseStudies {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+      }
     }
   }
 }

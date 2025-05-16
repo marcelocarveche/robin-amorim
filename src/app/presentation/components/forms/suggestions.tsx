@@ -10,8 +10,8 @@ export const SuggestionsForm: React.FC<Props> = ({
 }) => {
   return (
     <svg
-      width="291"
-      height="402"
+      width="100%"
+      height="auto"
       viewBox="0 0 291 402"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

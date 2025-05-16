@@ -1,7 +1,27 @@
 .container {
   display: flex;
   justify-content: center;
-  // align-items: center;
-  width: auto; // ou tamanho fixo, se preferir
-  height: auto; // ou tamanho fixo, se preferir
+  width: 25rem;
+  height: auto;
+  aspect-ratio: 299 / 250; // Mantém a proporção do SVG
+  // max-width: 100%;
+  padding-left: 1rem;
+  svg {
+    // width: 100%;
+    height: 100%;
+    display: block;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-width: 45.0625rem;
+  }
+}
+
+@media (max-width: 75rem) {
+  .container {
+    height: 20rem;
+    // background-color: red;
+  }
 }

@@ -1,5 +1,17 @@
 @use '../../styles/colors.module.scss' as *;
 
+@mixin Tag {
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem; // 14px
+  font-weight: bold;
+  // Definir letra sempre maiuscula e bloquear quebra de linha
+
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 .tagsWrapper {
   display: flex;
   gap: 1rem;
@@ -13,18 +25,6 @@
     justify-content: flex-end;
   }
 
-  @mixin Tag {
-    padding: 0.375rem 0.75rem;
-    border-radius: 0.5rem;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.875rem; // 14px
-    font-weight: bold;
-    // Definir letra sempre maiuscula e bloquear quebra de linha
-
-    text-transform: uppercase;
-    white-space: nowrap;
-  }
-
   .greyTag {
     @include Tag;
     color: $grey;
@@ -34,5 +34,21 @@
     @include Tag;
     color: $white;
     background-color: $BlueishDefault;
+  }
+}
+
+@media (max-width: 60rem) {
+  .tagsWrapper {
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    column-gap: 1.5rem;
+
+    .greyTag {
+      font-size: 1.25rem;
+    }
+    .blueTag {
+      font-weight: 500;
+      font-size: 1.25rem;
+    }
   }
 }

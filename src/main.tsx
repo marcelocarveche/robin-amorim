@@ -4,6 +4,7 @@ import styles from '@/app/presentation/styles/global.module.scss' // importar o 
 import AppRoutes from '@/app/infrastructure/routes/routes'
 import GlobalProvider from '@/app/infrastructure/providers/global-provider'
 import { BrowserRouter } from 'react-router-dom'
+import { MobileProvider } from '@/app/infrastructure/providers/mobile-provider'
 
 const rootElement = document.getElementById('root')
 if (rootElement) {
@@ -13,9 +14,11 @@ if (rootElement) {
   console.log('Renderizando aplicação dentro do BrowserRouter')
   ReactDOM.createRoot(rootElement).render(
     <BrowserRouter>
-      <GlobalProvider>
-        <AppRoutes />
-      </GlobalProvider>
+      <MobileProvider>
+        <GlobalProvider>
+          <AppRoutes />
+        </GlobalProvider>
+      </MobileProvider>
     </BrowserRouter>
   )
 } else {

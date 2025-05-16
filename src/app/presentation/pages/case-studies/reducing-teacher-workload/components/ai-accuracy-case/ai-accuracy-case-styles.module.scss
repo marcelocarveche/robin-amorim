@@ -3,13 +3,15 @@
 
 .container {
   display: flex;
-  gap: 5rem;
+  justify-content: center;
+  column-gap: 5rem;
+  width: 100%;
 
   .text {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: fit-content;
+    width: 20rem;
     height: 100%;
 
     h4 {
@@ -23,35 +25,39 @@
     }
   }
   .wrapper {
-    position: relative;
+    min-width: 32rem;
     .content {
-      width: 29.5rem;
-      height: 19rem;
+      aspect-ratio: 3 / 2;
+      position: relative;
+      height: 100%;
 
       .forms_1 {
         position: absolute;
         z-index: 1;
-        left: 5.5rem;
-        bottom: -0.5rem;
+        left: 25%;
+        bottom: -4%;
         z-index: 3;
+        width: 20%;
       }
 
       .forms_2 {
         position: absolute;
         z-index: 0;
-        right: -1rem;
-        top: 3rem;
+        right: -4%;
+        top: 29%;
         z-index: 1;
+        width: 20%;
       }
 
       .image_1 {
         z-index: 1;
         position: absolute;
-        padding: 2rem;
+        padding: 5%;
         @include Card;
         background-color: #d7d4e3;
+        width: 95%;
         img {
-          width: 23.5rem;
+          width: 100%;
         }
       }
 
@@ -59,26 +65,116 @@
         @include Card;
         background-color: #d7d4e3;
         position: absolute;
-        padding: 1.25rem 1rem 4rem 1rem;
+        padding: 4% 4% 10% 4%;
         right: 0;
-        bottom: 0rem;
+        bottom: 0;
         z-index: 2;
+        width: 60%;
 
         .imagesWrap {
           position: relative;
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
-          width: fit-content;
+          width: 100%;
           .img2 {
-            width: 18rem;
+            width: 100%;
           }
           .img21 {
             position: absolute;
-            right: 0.1rem;
-            bottom: -3rem;
+            right: 2%;
+            bottom: -50%;
 
-            width: 7rem;
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 62.5rem) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .text {
+      // display: flex;
+      // flex-direction: column;
+      // gap: 1rem;
+      // width: fit-content;
+      // height: 100%;
+
+      // h4 {
+      //   @include Heading4;
+      //   text-align: start;
+      // }
+
+      // p {
+      //   @include BodyText2;
+      //   text-align: start;
+      // }
+    }
+    .wrapper {
+      // position: relative;
+      min-width: 100%;
+      .content {
+        // width: 29.5rem;
+        // height: 19rem;
+
+        .forms_1 {
+          // position: absolute;
+          // z-index: 1;
+          // left: 5.5rem;
+          // bottom: -0.5rem;
+          // z-index: 3;
+        }
+
+        .forms_2 {
+          // position: absolute;
+          // z-index: 0;
+          // right: -1rem;
+          // top: 3rem;
+          // z-index: 1;
+        }
+
+        .image_1 {
+          // z-index: 1;
+          // position: absolute;
+          // padding: 2rem;
+          // @include Card;
+          // background-color: #d7d4e3;
+          // img {
+          //   width: 23.5rem;
+          // }
+        }
+
+        .image_2 {
+          // @include Card;
+          // background-color: #d7d4e3;
+          // position: absolute;
+          // padding: 1.25rem 1rem 4rem 1rem;
+          // right: 0;
+          // bottom: 0rem;
+          // z-index: 2;
+
+          .imagesWrap {
+            // position: relative;
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: flex-end;
+            // width: fit-content;
+            .img2 {
+              // width: 18rem;
+            }
+            .img21 {
+              // position: absolute;
+              // right: 0.1rem;
+              // bottom: -3rem;
+
+              // width: 7rem;
+            }
           }
         }
       }
