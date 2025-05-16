@@ -35,3 +35,77 @@
     }
   }
 }
+
+@media (max-width: 31.25rem) {
+  .container {
+    background-color: transparent;
+    gap: 2rem;
+    position: relative;
+    width: 100%;
+
+    .carousel-viewport {
+      width: 100%;
+      overflow: hidden;
+      touch-action: pan-x;
+      min-height: 12rem;
+      position: relative;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .carousel-track {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      // height: 100%;
+      transition: transform 0.3s;
+    }
+
+    .commentWrap {
+      min-height: 12rem;
+      height: auto;
+      align-items: center;
+      flex-direction: column;
+      gap: 2rem;
+      position: relative;
+      width: 100%;
+      max-width: 100vw;
+      flex-shrink: 0;
+
+      .textWrap {
+        padding: 0 4rem;
+        align-items: center;
+        gap: 1rem;
+        .message {
+          font-size: 1.5rem;
+          color: $black;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .carouselDots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .carouselDot,
+  .carouselDotActive {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background 0.2s;
+  }
+
+  .carouselDot {
+    background: #ffd2a6;
+  }
+  .carouselDotActive {
+    background: #ff7a02;
+  }
+}

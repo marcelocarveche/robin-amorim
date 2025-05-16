@@ -49,22 +49,6 @@ $maxWidth: 65rem;
       flex-direction: column;
       gap: 5rem;
       align-items: center;
-      .skills {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        font-family: 'Inter';
-        .skill {
-          strong {
-            font-size: 1.25rem;
-            color: $black;
-            font-weight: 600;
-          }
-
-          font-size: 1.125rem;
-        }
-      }
       .overview {
         display: flex;
         flex-direction: column;
@@ -220,8 +204,11 @@ $maxWidth: 65rem;
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
-        gap: 1.25rem;
+        justify-content: space-between;
+        gap: 2rem;
+        width: 100%;
+        height: 100%;
+        max-width: 90rem;
 
         .card {
           background: $offWhite;
@@ -232,9 +219,12 @@ $maxWidth: 65rem;
           align-items: center;
           justify-content: center;
           gap: 1.5rem;
-          width: 15.5rem;
+          width: 100%;
+          height: 100%;
           border-radius: 0.5rem;
           z-index: 1;
+
+          aspect-ratio: 250 / 200;
 
           h4 {
             width: 100%;
@@ -259,11 +249,11 @@ $maxWidth: 65rem;
             left: 0;
           }
           &[data-index='1'] {
-            top: 36%;
+            top: 6rem;
             left: 0;
           }
           &[data-index='2'] {
-            bottom: 0;
+            top: 12rem;
             left: 0;
           }
           &[data-index='3'] {
@@ -271,7 +261,7 @@ $maxWidth: 65rem;
             left: 5.5rem;
           }
           &[data-index='4'] {
-            bottom: 0;
+            top: 12rem;
             left: 5.5rem;
           }
         }
@@ -280,6 +270,7 @@ $maxWidth: 65rem;
           position: absolute;
           right: -2.75rem;
           bottom: -4rem;
+          width: 12.5rem;
         }
       }
 
@@ -357,7 +348,7 @@ $maxWidth: 65rem;
     align-items: center;
     justify-content: center;
     gap: 6.25rem;
-    width: 60rem;
+    width: 100%;
 
     .header {
       display: flex;
@@ -387,6 +378,10 @@ $maxWidth: 65rem;
       width: inherit;
       > :nth-child(even) {
         flex-direction: row-reverse;
+      }
+      // pegar todos os filhos
+      & > * {
+        max-height: 21.875rem;
       }
     }
   }
@@ -442,74 +437,78 @@ $maxWidth: 65rem;
       }
     }
     .cardsWrap {
-      position: relative;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
       gap: 3.75rem;
+      .cardElementWrap {
+        position: relative;
+        // z-index: 2;
+        .card {
+          position: relative;
+          background-color: $offWhite;
+          border: 0.0625rem solid $grey;
+          padding: 1.5rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 1.5rem;
+          width: 19rem;
+          height: 17rem;
+          border-radius: 0.5rem;
+          z-index: 3;
 
-      .card {
-        background-color: $offWhite;
-        border: 0.0625rem solid $grey;
-        padding: 1.5rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1.5rem;
-        width: 19rem;
-        height: 17rem;
-        border-radius: 0.5rem;
-        z-index: 1;
+          h4 {
+            width: 100%;
+            @include Heading4;
+            text-align: start;
+          }
+          p {
+            @include BodyText2;
+          }
+        }
+        .triangle {
+          position: absolute;
 
-        h4 {
-          width: 100%;
-          @include Heading4;
-          text-align: start;
-        }
-        p {
-          @include BodyText2;
-        }
-      }
+          width: 25%;
+          height: 25%;
+          z-index: 1;
 
-      .triangle {
-        position: absolute;
+          &[data-index='0'] {
+            top: -15%;
+            right: 5%;
+          }
+          &[data-index='1'] {
+            top: -15%;
+            right: -23%;
+          }
+          &[data-index='2'] {
+            top: 20%;
+            right: -23%;
+          }
+          &[data-index='3'] {
+            top: 55%;
+            right: -23%;
+          }
+          &[data-index='4'] {
+            top: 90%;
+            right: -23%;
+          }
+          &[data-index='5'] {
+            top: 90%;
+            right: 5%;
+          }
+        }
 
-        width: 4.5rem;
-        height: 4.5rem;
-        z-index: 1;
-
-        &[data-index='0'] {
-          top: -2rem;
-          right: 0.5rem;
+        .moon {
+          position: absolute;
+          left: -15%;
+          top: -20%;
+          width: 40%;
+          z-index: 1;
         }
-        &[data-index='1'] {
-          top: -2rem;
-          right: -5rem;
-        }
-        &[data-index='2'] {
-          top: 3.5rem;
-          right: -5rem;
-        }
-        &[data-index='3'] {
-          top: 9rem;
-          right: -5rem;
-        }
-        &[data-index='4'] {
-          top: 14.5rem;
-          right: -5rem;
-        }
-        &[data-index='5'] {
-          top: 14.5rem;
-          right: 0.5rem;
-        }
-      }
-
-      .moon {
-        position: absolute;
-        left: -6rem;
-        top: -4rem;
       }
     }
   }
@@ -531,19 +530,21 @@ $maxWidth: 65rem;
   .clover {
     position: absolute;
     top: 0;
-    right: -3rem;
+    right: -10%;
+    transform: rotate(-50deg);
   }
   .pacman {
     position: absolute;
-    bottom: -1.75rem;
+    bottom: -20%;
     left: 0;
+    width: 40%;
   }
   .content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 4rem;
+    gap: 3rem;
 
     .title {
       h2 {
@@ -552,40 +553,384 @@ $maxWidth: 65rem;
       }
     }
 
-    .cards {
+    .body {
       display: flex;
-      gap: 0.9375rem;
-      justify-content: center;
-      align-items: center;
-      .card {
-        padding: 1.5rem;
-        background-color: $offWhite;
-        border-radius: 0.5rem;
-        border: 0.0625rem solid $black;
-        width: 17.625rem;
-        height: 14rem;
+      flex-direction: column;
+      row-gap: 4rem;
+      .cards {
+        display: flex;
+        gap: 0.9375rem;
+        justify-content: center;
+        align-items: center;
+
+        .card {
+          padding: 1.5rem;
+          background-color: $offWhite;
+          border-radius: 0.5rem;
+          border: 0.0625rem solid $black;
+          width: 17.625rem;
+          height: 14rem;
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+
+          .head {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: flex-start;
+            align-items: center;
+            h4 {
+              @include Heading4;
+              text-align: start;
+            }
+          }
+
+          @include BodyText3;
+        }
+      }
+
+      .text {
+        @include BodyText2;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 62.5rem) {
+  .section_1 {
+    padding: 3rem 1.5rem 5rem 1.5rem;
+    .content {
+      gap: 5rem;
+      .header {
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 0.75rem;
+        padding: 0 2rem;
+        p {
+          font-size: 1.5rem;
+        }
+        .title {
+          h1 {
+            @include Heading3;
+          }
+        }
+      }
 
-        .head {
-          display: flex;
-          gap: 0.75rem;
-          justify-content: flex-start;
-          align-items: center;
+      .body {
+        padding: 0rem;
+        width: 100%;
+        height: 100%;
+      }
+
+      .footer {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        align-items: center;
+        .overview {
+          padding: 2rem;
+          h2 {
+            @include Heading3;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .section_2 {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+    // gap: 2rem;
+    // padding: 0 8rem;
+    // background-color: $offGrey;
+    // padding: 6.25rem 0;
+    // position: relative;
+    .content {
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+      // justify-content: center;
+      // width: 100%;
+      // z-index: 2;
+      // max-width: $maxWidth;
+      // gap: 5rem;
+      padding: 0 1rem;
+      .header {
+        // display: flex;
+        // flex-direction: column;
+        // gap: 0.75rem;
+        // max-width: 45rem;
+        h2 {
+          @include Heading3;
+          text-align: center;
+        }
+        // p {
+        //   @include BodyText2;
+        //   text-align: center;
+        // }
+      }
+      .body {
+        // width: 100%;
+        // display: flex;
+        // flex-direction: column;
+        // gap: 3rem;
+      }
+    }
+    .form_1 {
+      width: 30%;
+    }
+    .form_2 {
+      width: 30%;
+    }
+  }
+
+  .section_3 {
+    padding: 2rem 0;
+    .content {
+      .objective {
+        padding: 2rem;
+        .title {
+          h2 {
+            @include Heading3;
+          }
+        }
+        .hypothesis {
           h4 {
             @include Heading4;
-            text-align: start;
+          }
+        }
+      }
+
+      .insights {
+        .title {
+          padding: 2rem;
+          h2 {
+            @include Heading3;
+          }
+        }
+        .cardsWrap {
+          flex-direction: column;
+          width: 80%;
+
+          .card {
+            aspect-ratio: 125 / 75;
+
+            h4 {
+              width: 100%;
+              @include Heading4;
+              text-align: start;
+            }
+            p {
+              font-size: 1.25rem;
+              line-height: 2rem;
+            }
+          }
+        }
+        .cardsWrap2 {
+          padding: 0 2rem;
+          overflow-x: auto;
+          overflow-y: hidden;
+          justify-content: flex-start;
+          width: 100%;
+          flex-wrap: nowrap;
+          padding-bottom: 1rem;
+
+          .card {
+            display: flex;
+            width: 200%;
+            min-width: 18rem;
+          }
+        }
+        .paragraphy {
+          padding: 2rem;
+        }
+      }
+    }
+  }
+
+  .section_4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $offGrey;
+
+    .content {
+      gap: 4rem;
+      .header {
+        h2 {
+          @include Heading3;
+        }
+      }
+      .casesWrap {
+        flex-direction: column;
+        gap: 5rem;
+        > :nth-child(even) {
+          flex-direction: column;
+        }
+        & > * {
+          max-height: none;
+        }
+      }
+    }
+  }
+
+  .section_5 {
+    .content {
+      // display: flex;
+      // width: 100%;
+      // max-width: 70rem;
+      // flex-direction: column;
+      // align-items: center;
+      // justify-content: center;
+      gap: 6rem;
+
+      .title {
+        h2 {
+          @include Heading3;
+        }
+      }
+    }
+  }
+
+  .section_6 {
+    .content {
+      row-gap: 4rem;
+      .title {
+        h2 {
+          @include Heading3;
+        }
+      }
+      .cardsWrap {
+        flex-direction: column;
+        // padding: 3rem;
+        .cardElementWrap {
+          .card {
+            // background-color: $offWhite;
+            // border: 0.0625rem solid $grey;
+            // padding: 1.5rem;
+            // display: flex;
+            // flex-direction: column;
+            // align-items: center;
+            // justify-content: center;
+            // gap: 1.5rem;
+            aspect-ratio: 250 / 200;
+            width: 100%;
+            // height: 100%;
+            // height: 17rem;
+            // border-radius: 0.5rem;
+            // z-index: 1;
+
+            // h4 {
+            //   width: 100%;
+            //   @include Heading4;
+            //   text-align: start;
+            // }
+            // p {
+            //   @include BodyText2;
+            // }
+          }
+        }
+      }
+    }
+    .form_1 {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .form_2 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  .section_7 {
+    // position: relative;
+    padding-bottom: 7rem;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    .clover {
+      // position: absolute;
+      // top: 0;
+      // right: -3rem;
+      display: none;
+    }
+    .pacman {
+      // position: absolute;
+      // bottom: -1.75rem;
+      // left: 0;
+    }
+
+    .content {
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+      // justify-content: center;
+      // gap: 4rem;
+      width: 100%;
+
+      .title {
+        // h2 {
+        //   @include Heading2;
+        //   text-align: center;
+        // }
+      }
+
+      .body {
+        flex-direction: column-reverse;
+        width: 100%;
+        row-gap: 2rem;
+        .cards {
+          padding: 2rem;
+          // display: flex;
+          // gap: 0.9375rem;
+          justify-content: flex-start;
+          // align-items: center;
+          // tornar esse componente um carrossel
+          overflow-x: scroll;
+          // width: 100%;
+          // justify-content: space-evenly;
+          .card {
+            // padding: 1.5rem;
+            // background-color: $offWhite;
+            // border-radius: 0.5rem;
+            // border: 0.0625rem solid $black;
+            // width: 17.625rem;
+            // height: 14rem;
+            // display: flex;
+            // flex-direction: column;
+            // gap: 1.5rem;
+            width: 100%;
+            aspect-ratio: 400 / 250;
+
+            .head {
+              // display: flex;
+              // gap: 0.75rem;
+              // justify-content: flex-start;
+              // align-items: center;
+              // h4 {
+              //   @include Heading4;
+              //   text-align: start;
+              // }
+            }
+
+            // @include BodyText3;
           }
         }
 
-        @include BodyText3;
+        .text {
+          @include BodyText1;
+          text-align: center;
+          padding: 0 3rem;
+        }
       }
-    }
-
-    .text {
-      @include BodyText2;
-      text-align: center;
     }
   }
 }
