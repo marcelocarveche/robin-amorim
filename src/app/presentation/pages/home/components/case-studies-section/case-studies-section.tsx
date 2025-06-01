@@ -4,6 +4,7 @@ import {
   HandleCaseStudiesSection,
   HandleRecoveringPrePandemic,
 } from '@/app/presentation/components'
+import { useIsMobile } from '@/app/infrastructure/providers/mobile-provider'
 
 type Props = {} & React.HTMLAttributes<HTMLDivElement>
 

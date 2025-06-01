@@ -76,3 +76,19 @@
     cursor: pointer;
   }
 }
+
+@media (max-width: 62.5rem) {
+  .container {
+    .content {
+      h2 {
+        @include Heading3;
+      }
+    }
+  }
+
+  .wrapper {
+    .content {
+      padding-right: 0.75rem;
+    }
+  }
+}

@@ -2,7 +2,6 @@ import React from 'react'
 import styles from './reducing-teacher-workload-styles.module.scss'
 import {
   AddIcon,
-  CaseStudiesSection,
   DeniedIcon,
   GoalIcon,
   IterationIcon,
@@ -25,7 +24,6 @@ import {
 import { LongCloudForm } from '@/app/presentation/components/forms/long-cloud'
 import { TeacherEliana } from './components/teacher-eliana/teacher-eliana'
 import { TeacherMarcia } from './components/teacher-marcia/teacher-marcia'
-import { Forms } from '@/app/presentation/components/case-studies-section/components/forms/forms'
 import { SpeechToTextCase } from './components/speech-to-text-case/speech-to-text-case'
 import { ReviewSuggestionsCase } from './components/review-suggestion-case/review-suggestions-case'
 import { AIAccuracyCase } from './components/ai-accuracy-case/ai-accuracy-case'
@@ -36,10 +34,13 @@ import { TeacherJean } from './components/teacher-jean/teacher-jean'
 import { TeacherSonia } from './components/teacher-sonia/teacher-sonia'
 import { TeacherLucia } from './components/teacher-lucia/teacher-lucia'
 import { colors } from '@/app/presentation/styles'
+import { Skills } from './components/skills/skills'
+import { useIsMobile } from '@/app/infrastructure/providers/mobile-provider'
 
 type Props = {} & React.HTMLAttributes<HTMLDivElement>
 
 export const ReducingTeacherWorkload: React.FC<Props> = ({ ...props }) => {
+  const isMobile = useIsMobile()
   const tags = ['web responsible', 'app', 'research', 'ux/ui design']
   const insightsCards = [
     {
@@ -81,8 +82,7 @@ export const ReducingTeacherWorkload: React.FC<Props> = ({ ...props }) => {
   const challengeComments: Array<Comment> = [
     {
       profile: <TeacherEliana />,
-      message:
-        "“This is so much work!! I lost my entire weekend typing each child's text!”",
+      message: `“This is so much work!!${isMobile && '<br>'} I lost my entire weekend typing each child's text!”`,
       author: 'Eliana, Teacher',
     },
     {
@@ -126,7 +126,7 @@ export const ReducingTeacherWorkload: React.FC<Props> = ({ ...props }) => {
           <div className={styles.header}>
             <p>B2B2C - STARTUP</p>
             <div className={styles.title}>
-              <h1>Reducing Teacher Workload by 70% throught AI</h1>
+              <h1>Reducing Teacher Workload by 70% throught AI Design</h1>
               <Tags tags={tags} color="blue" />
             </div>
           </div>
@@ -134,33 +134,21 @@ export const ReducingTeacherWorkload: React.FC<Props> = ({ ...props }) => {
             <Book />
           </div>
           <div className={styles.footer}>
-            <div className={styles.skills}>
-              <p className={styles.skill}>
-                <strong>MY ROLE: </strong>
-                Lead UX/UI Designer
-              </p>
-              <p className={styles.skill}>
-                <strong>MY RESPONSABILITIES: </strong>User Research . Wireframe
-                . Prototype . Usability Test . Iteration . Alignment & Hand-off
-              </p>
-              <p className={styles.skill}>
-                <strong>TEAM: </strong>Along with 1 Product Manager + 6
-                Developers
-              </p>
-            </div>
+            <Skills />
             <div className={styles.overview}>
               <h2>Overview</h2>
               <div className={styles.paragraphy}>
                 <p>
                   Estante Mágica is the main K-12 SaaS Edtech in Latin America.
-                  <br />
+                  {!isMobile && <br />}
                   At Estante Mágica's platform, teachers faced significant
                   frustration and time loss manually editing student storybooks.
                 </p>
                 <p>
                   As the lead UX Designer on this initiative, I leveraged AI and
                   user-centered design to create an assistive editing experience
-                  that reduced teacher workload by a proven 78%, directly
+                  that reduced teacher workload by a proven 70%, directly
+                  impacting platform retention.
                 </p>
               </div>
             </div>
@@ -200,7 +188,8 @@ export const ReducingTeacherWorkload: React.FC<Props> = ({ ...props }) => {
               <QuestionBaloon />
               <h4>Core Hypothesis</h4>
               <p>
-                An AI-assisted interface, designed specifically to suggest
+                An AI-assisted interface, designed specifically to
+                <b> suggest </b>
                 corrections, could streamline the process while critically
                 maintaining the teacher's sense of control and authorship.
               </p>
@@ -296,80 +285,84 @@ export const ReducingTeacherWorkload: React.FC<Props> = ({ ...props }) => {
       <section className={styles.section_6}>
         <div className={styles.content}>
           <div className={styles.title}>
-            <h2>Learnings & Future Vision</h2>
+            <h2>Learnings & {isMobile && <br />}Future Vision</h2>
           </div>
           <div className={styles.cardsWrap}>
-            {new Array(6).fill(0).map((_, index) => (
-              <TriangleForm
-                key={index}
-                data-index={index}
-                className={styles.triangle}
-              />
-            ))}
-            {learningsCards.map((card, index) => (
-              <div key={index} className={styles.card}>
-                <h4>{card.title}</h4>
-                <p>{card.description}</p>
+            {learningsCards.map((card, index, cards) => (
+              <div className={styles.cardElementWrap} key={index}>
+                {index === 0 && <MoonForm className={styles.moon} />}
+                {index === cards.length - 1 &&
+                  new Array(6)
+                    .fill(0)
+                    .map((_, index) => (
+                      <TriangleForm
+                        key={index}
+                        data-index={index}
+                        className={styles.triangle}
+                      />
+                    ))}
+
+                <div className={styles.card}>
+                  <h4>{card.title}</h4>
+                  <p>{card.description}</p>
+                </div>
               </div>
             ))}
-            <MoonForm className={styles.moon} />
           </div>
         </div>
       </section>
       <section className={styles.section_7}>
-        <CloverForm
-          size={216}
-          className={styles.clover}
-          color={colors.pinkDefault}
-        />
+        <CloverForm className={styles.clover} color={colors.pinkDefault} />
         <PacmanForm className={styles.pacman} />
         <div className={styles.content}>
           <div className={styles.title}>
-            <h2>Summary & Conclusion</h2>
+            <h2>Summary & {isMobile && <br />}Conclusion</h2>
           </div>
-          <div className={styles.cards}>
-            <div className={styles.card}>
-              <div className={styles.head}>
-                <DeniedIcon />
-                <h4>Problem</h4>
+          <div className={styles.body}>
+            <div className={styles.cards}>
+              <div className={styles.card}>
+                <div className={styles.head}>
+                  <DeniedIcon />
+                  <h4>Problem</h4>
+                </div>
+                <p>
+                  The workload of editing, {!isMobile && <br />}
+                  and reviewing each child's{!isMobile && <br />}
+                  content was the main {!isMobile && <br />}
+                  reason for churn.
+                </p>
               </div>
-              <p>
-                The workload of editing, <br />
-                and reviewing each child's <br />
-                content was the main <br />
-                reason for churn.
-              </p>
+              <div className={styles.card}>
+                <div className={styles.head}>
+                  <GoalIcon />
+                  <h4>Goal</h4>
+                </div>
+                <p>
+                  Simplify the editing and <br />
+                  reviewing of students' <br />
+                  stories for teachers.
+                </p>
+              </div>
+              <div className={styles.card}>
+                <div className={styles.head}>
+                  <StarIcon />
+                  <h4>Result</h4>
+                </div>
+                <div>
+                  <p>AI integration resulted in:</p>
+                  <p>•&nbsp;&nbsp;78% reduction in workload.</p>
+                  <p>•&nbsp;&nbsp;20% increase in customer retention.</p>
+                </div>
+              </div>
             </div>
-            <div className={styles.card}>
-              <div className={styles.head}>
-                <GoalIcon />
-                <h4>Goal</h4>
-              </div>
-              <p>
-                Simplify the editing and <br />
-                reviewing of students' <br />
-                stories for teachers.
-              </p>
-            </div>
-            <div className={styles.card}>
-              <div className={styles.head}>
-                <StarIcon />
-                <h4>Result</h4>
-              </div>
-              <div>
-                <p>AI integration resulted in:</p>
-                <li>78% reduction in workload.</li>
-                <li>20% increase in customer retention.</li>
-              </div>
-            </div>
+            <p className={styles.text}>
+              By focusing on user needs, leveraging strategic AI integration,
+              and maintaining a rigorous design {!isMobile && <br />}
+              process, we successfully delivered a solution that not only
+              drastically improved the teacher experience {!isMobile && <br />}
+              but also created significant business value for Estante Mágica.
+            </p>
           </div>
-          <p className={styles.text}>
-            By focusing on user needs, leveraging strategic AI integration, and
-            maintaining a rigorous design <br />
-            process, we successfully delivered a solution that not only
-            drastically improved the teacher experience <br />
-            but also created significant business value for Estante Mágica.
-          </p>
         </div>
       </section>
     </>
