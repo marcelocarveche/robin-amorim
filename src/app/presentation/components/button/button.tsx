@@ -7,7 +7,7 @@ export const Button: React.FC<Props> = ({ children, ...props }) => {
   const style = props.onClick ? styles.enabled : styles.disabled
   return (
     <button onClick={props.onClick} className={style} {...props}>
-      {children}
+      {children ? children : 'Coming soon'}
     </button>
   )
 }
