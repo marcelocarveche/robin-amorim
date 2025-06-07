@@ -17,6 +17,10 @@ import TeacherLucia from './teacher-lucia.png'
 import TeacherSonia from './teacher-sonia.png'
 import EcommerceExperience1 from './ecommerce-experience-case-1.png'
 import EcommerceExperience2 from './ecommerce-experience-case-2.png'
+import CarlaNevesNeto from './carla-neves-neto.png'
+import RecoveringPrePandemic from './recovering-pre-pandemic-1.png'
+import EscolinhaFelizLogo from './escolinha-feliz-logo.png'
+import WhiteStar from './white-star.png'
 
 export const Assets = {
   HeroPhoto,
@@ -38,4 +42,8 @@ export const Assets = {
   TeacherSonia,
   EcommerceExperience1,
   EcommerceExperience2,
+  RecoveringPrePandemic,
+  CarlaNevesNeto,
+  EscolinhaFelizLogo,
+  WhiteStar,
 }
