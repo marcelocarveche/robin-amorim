@@ -1,0 +1,61 @@
+@use '../../../../../styles/colors.module.scss' as *;
+@use '../../../../../styles/components.module.scss' as *;
+
+.wrapper {
+  min-width: 50rem;
+  .content {
+    height: 100%;
+    position: relative;
+    aspect-ratio: 3 / 1.8;
+
+    .authorPage {
+      position: absolute;
+      z-index: 2;
+      width: 87%;
+
+      right: 0;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .classmates {
+      position: absolute;
+      width: 25%;
+      left: 0rem;
+      bottom: 0%;
+      z-index: 3;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .forms_1 {
+      position: absolute;
+      z-index: 1;
+      top: 10%;
+      left: -5%;
+      width: 20%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      .circle {
+        width: 45%;
+        aspect-ratio: 73 / 73;
+      }
+    }
+
+    .forms_2 {
+      position: absolute;
+      z-index: 2;
+      left: 20%;
+      bottom: 0%;
+      width: 15%;
+      aspect-ratio: 121 / 127;
+    }
+  }
+}

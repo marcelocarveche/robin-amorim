@@ -13,6 +13,10 @@ export const HandleRecoveringPrePandemic: React.FC<Props> = ({ ...props }) => {
   const isMobile = useIsMobile()
   const tags = ['web responsible', 'research', 'ux/ui design']
 
+  const navigate = useNavigate()
+  const onClickButton = () => {
+    navigate(Routes.caseStudies.ecommerce.url)
+  }
   return (
     <div className={styles.container} {...props}>
       <div className={styles.content}>
@@ -48,7 +52,7 @@ export const HandleRecoveringPrePandemic: React.FC<Props> = ({ ...props }) => {
                 <Tags tags={tags} color="grey" align="start" />
               </div>
               <div className={styles.footer}>
-                <Button>Coming Soon</Button>
+                <Button onClick={onClickButton}>See Case Study</Button>
               </div>
             </div>
           </div>

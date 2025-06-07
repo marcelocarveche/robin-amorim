@@ -14,6 +14,10 @@ export * from './icons/workload'
 export * from './icons/goal'
 export * from './icons/denied'
 export * from './icons/star'
+export * from './icons/arpu-lift'
+export * from './icons/bigger-carts'
+export * from './icons/revenue'
+export * from './icons/families'
 
 // Components
 export * from './hero-photo/hero-photo'
@@ -23,3 +27,5 @@ export * from './handle-reducing-teacher-workload/handle-reducing-teacher-worklo
 export * from './handle-recovering-pre-pandemic/handle-recovering-pre-pandemic'
 export * from './tags/tags'
 export * from './button/button'
+export * from './skills/skills'
+export * from './navigation/navigation'

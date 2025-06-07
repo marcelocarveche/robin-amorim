@@ -15,7 +15,7 @@ export const HandleCaseStudiesSection: React.FC<Props> = ({ ...props }) => {
   const tags = ['web responsible', 'app', 'research', 'ux/ui design']
 
   const handleButtonClick = () => {
-    navigate(Routes.caseStudies.reducingTeacherWorkload)
+    navigate(Routes.caseStudies.reducingTeacherWorkload.url)
   }
 
   return (
