@@ -5,6 +5,7 @@ import {
   DeniedIcon,
   GoalIcon,
   IterationIcon,
+  Navigation,
   PrototypingIcon,
   SketchingIcon,
   StarIcon,
@@ -34,8 +35,10 @@ import { TeacherJean } from './components/teacher-jean/teacher-jean'
 import { TeacherSonia } from './components/teacher-sonia/teacher-sonia'
 import { TeacherLucia } from './components/teacher-lucia/teacher-lucia'
 import { colors } from '@/app/presentation/styles'
-import { Skills } from './components/skills/skills'
+import { Skills } from '@/app/presentation/components'
 import { useIsMobile } from '@/app/infrastructure/providers/mobile-provider'
+import { useNavigate } from 'react-router-dom'
+import { Routes } from '@/app/presentation/protocols'
 
 type Props = {} & React.HTMLAttributes<HTMLDivElement>
 
@@ -364,6 +367,9 @@ export const ReducingTeacherWorkload: React.FC<Props> = ({ ...props }) => {
             </p>
           </div>
         </div>
+      </section>
+      <section className={styles.section_8}>
+        <Navigation next={Routes.caseStudies.ecommerce} />
       </section>
     </>
   )

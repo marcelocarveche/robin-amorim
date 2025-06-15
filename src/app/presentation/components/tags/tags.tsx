@@ -3,7 +3,7 @@ import styles from './tags-styles.module.scss'
 
 type Props = {
   tags: string[]
-  color: 'grey' | 'blue'
+  color: 'grey' | 'blue' | 'yellow'
   align?: 'start' | 'center' | 'end'
 } & React.HTMLAttributes<HTMLDivElement>
 
@@ -13,7 +13,12 @@ export const Tags: React.FC<Props> = ({
   align = 'center',
   ...props
 }) => {
-  const tagStyle = color === 'blue' ? styles.blueTag : styles.greyTag
+  const colors = new Map<string, string>([
+    ['grey', styles.greyTag],
+    ['blue', styles.blueTag],
+    ['yellow', styles.yellowTag],
+  ])
+  const tagStyle = colors.get(color) || styles.greyTag
 
   return (
     <div className={styles.tagsWrapper} data-align={align} {...props}>

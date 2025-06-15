@@ -35,6 +35,11 @@
     color: $white;
     background-color: $BlueishDefault;
   }
+  .yellowTag {
+    @include Tag;
+    color: $black;
+    background-color: $yellowDefault;
+  }
 }
 
 @media (max-width: 60rem) {

@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './case-studies-section-styles.module.scss'
 import {
+  HandleAiPoweredUx,
   HandleCaseStudiesSection,
   HandleRecoveringPrePandemic,
 } from '@/app/presentation/components'
@@ -16,6 +17,7 @@ export const CaseStudiesSection: React.FC<Props> = ({ ...props }) => {
         <div className={styles.caseStudies}>
           <HandleCaseStudiesSection />
           <HandleRecoveringPrePandemic />
+          <HandleAiPoweredUx />
         </div>
       </div>
     </section>

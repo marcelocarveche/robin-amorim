@@ -155,6 +155,7 @@ $maxWidth: 65rem;
       }
       .hypothesis {
         @include Card;
+        background-color: $white;
         padding: 2rem;
         display: flex;
         flex-direction: column;
@@ -296,7 +297,7 @@ $maxWidth: 65rem;
 
         .card {
           @include Card;
-          background-color: $offWhite;
+          background-color: $white;
           width: 15.75rem;
           display: flex;
           gap: 1rem;
@@ -447,7 +448,7 @@ $maxWidth: 65rem;
         // z-index: 2;
         .card {
           position: relative;
-          background-color: $offWhite;
+          background-color: $offGrey;
           border: 0.0625rem solid $grey;
           padding: 1.5rem;
           display: flex;
@@ -564,10 +565,9 @@ $maxWidth: 65rem;
         align-items: center;
 
         .card {
+          @include Card;
+          background-color: $white;
           padding: 1.5rem;
-          background-color: $offWhite;
-          border-radius: 0.5rem;
-          border: 0.0625rem solid $black;
           width: 17.625rem;
           height: 14rem;
           display: flex;
@@ -595,6 +595,11 @@ $maxWidth: 65rem;
       }
     }
   }
+}
+
+.section_8 {
+  background-color: $offGrey;
+  position: relative;
 }
 
 @media (max-width: 62.5rem) {

@@ -1,0 +1,587 @@
+@use '../../../styles/colors.module.scss' as *;
+@use '../../../styles/components.module.scss' as *;
+$maxWidth: 65rem;
+
+.section_1 {
+  background-color: $offGrey;
+  .content {
+    max-width: $maxWidth;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5rem;
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 1rem;
+
+      h1 {
+        @include Heading1;
+      }
+
+      p {
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        color: $grey;
+        text-transform: uppercase;
+        text-align: center;
+        width: 100%;
+      }
+    }
+    .body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    .footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 5rem;
+      .overview {
+        max-width: 42rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 1rem;
+        text-align: center;
+
+        h2 {
+          @include Heading2;
+        }
+        p {
+          @include BodyText2;
+        }
+      }
+    }
+  }
+}
+
+.section_2 {
+  .content {
+    max-width: $maxWidth;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5rem;
+    .header {
+      max-width: 40rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 1rem;
+      text-align: center;
+
+      h2 {
+        @include Heading2;
+      }
+      p {
+        @include BodyText2;
+      }
+    }
+    .body {
+    }
+    .footer {
+      max-width: 42rem;
+      h4 {
+        @include Heading4;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.section_3 {
+  background-color: $offGrey;
+  .content {
+    max-width: $maxWidth;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5rem;
+
+    .sub_section_1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 2.75rem;
+      width: 100%;
+      .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 1rem;
+        text-align: center;
+
+        h2 {
+          @include Heading2;
+        }
+        p {
+          max-width: 42rem;
+          @include BodyText2;
+        }
+      }
+      .body {
+        display: flex;
+        column-gap: 1.5rem;
+        .hypothese {
+          @include Card;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          row-gap: 1rem;
+          padding: 1.5rem;
+          aspect-ratio: 392 / 354;
+          height: 100%;
+          min-width: 24.5rem;
+          min-height: 22.125rem;
+          background-color: $white;
+          h4 {
+            @include Heading4;
+          }
+          p {
+            @include BodyText2;
+            text-align: center;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .sub_section_2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 6rem;
+      width: 100%;
+      .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 1rem;
+        text-align: center;
+
+        h2 {
+          @include Heading2;
+        }
+        p {
+          max-width: 42rem;
+          @include BodyText2;
+        }
+      }
+      .body {
+        display: flex;
+        column-gap: 1.5rem;
+        width: 100%;
+        position: relative;
+        .trianglesWrap {
+          position: absolute;
+          width: 20%;
+          height: 100%;
+          left: -10%;
+          top: -25%;
+        }
+        .discoveryCard {
+          position: relative;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          row-gap: 1.5rem;
+          padding: 1.5rem;
+          aspect-ratio: 248 / 268;
+          height: 100%;
+          min-width: 15.5rem;
+          min-height: 16.75rem;
+          border: 0.0625rem solid $grey;
+          border-radius: 0.5rem;
+          background-color: $offGrey;
+          h4 {
+            @include Heading4;
+            text-align: left;
+            width: 100%;
+          }
+          p {
+            @include BodyText2;
+            text-align: left;
+            width: 100%;
+          }
+        }
+        .moonElement {
+          position: absolute;
+          width: 25%;
+          top: 0%;
+          right: -18%;
+        }
+      }
+      .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 4rem;
+
+        p {
+          max-width: 43rem;
+          @include BodyText2;
+          text-align: center;
+          width: 100%;
+        }
+        .solutionsWrap {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          column-gap: 4rem;
+          row-gap: 2rem;
+          .solutionCard {
+            @include Card;
+            width: 100%;
+            display: flex;
+            // flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding: 0.5rem;
+            aspect-ratio: 252 / 96;
+            height: 100%;
+            max-width: 15.6875rem;
+            max-height: 6rem;
+            background: $white;
+
+            .icon {
+              max-width: 5rem;
+              width: 100%;
+              padding: 0.5rem;
+              border-radius: 0.5rem;
+              height: 5rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            p {
+              @include BodyText3;
+              text-align: left;
+              width: 100%;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.section_4 {
+  .content {
+    max-width: 65rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5rem;
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 1rem;
+      width: 100%;
+      max-width: 42rem;
+      h2 {
+        @include Heading2;
+        text-align: center;
+        width: 100%;
+      }
+      p {
+        @include BodyText2;
+        text-align: center;
+        width: 100%;
+      }
+    }
+    .body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 6rem;
+    }
+  }
+}
+
+.section_5 {
+  background-color: $offGrey;
+  .content {
+    max-width: $maxWidth;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5rem;
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 1rem;
+
+      h2 {
+        @include Heading2;
+        text-align: center;
+        width: 100%;
+      }
+    }
+    .body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4rem;
+      width: 100%;
+      max-width: 42rem;
+
+      .resultCard {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        row-gap: 0.75rem;
+        aspect-ratio: 212 / 176;
+        height: 100%;
+        min-width: 13.25rem;
+        min-height: 11rem;
+        .icon {
+          width: 4rem;
+          height: 4rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        h4 {
+          @include Heading5;
+          width: 100%;
+        }
+        p {
+          @include BodyText2;
+
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.section_6 {
+  .content {
+    max-width: $maxWidth;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5rem;
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 1rem;
+
+      h2 {
+        @include Heading2;
+        text-align: center;
+        width: 100%;
+      }
+    }
+    .body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4rem;
+      width: 100%;
+      position: relative;
+
+      .triangle {
+        position: absolute;
+        bottom: -25%;
+        left: -40%;
+        width: 30%;
+      }
+      .circles {
+        position: absolute;
+        top: -20%;
+        right: -32%;
+        width: 25%;
+      }
+
+      .cardsWrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+        width: 100%;
+        max-width: 42rem;
+        position: relative;
+
+        .card {
+          background-color: $offWhite;
+          border: 0.0625rem solid $grey;
+          border-radius: 0.5rem;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          row-gap: 1rem;
+          padding: 1.5rem;
+          aspect-ratio: 292 / 198;
+          height: 100%;
+          min-width: 18.25rem;
+          min-height: 12.375rem;
+
+          h4 {
+            @include Heading4;
+            width: 100%;
+          }
+          p {
+            @include BodyText2;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .footer {
+      max-width: 42rem;
+      p {
+        @include BodyText2;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.section_7 {
+  background-color: $offGrey;
+  position: relative;
+
+  .content {
+    max-width: $maxWidth;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5rem;
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 1rem;
+
+      h2 {
+        @include Heading2;
+        text-align: center;
+        width: 100%;
+      }
+    }
+    .body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4rem;
+      width: 100%;
+
+      .cardsWrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.25rem;
+        width: 100%;
+        max-width: 42rem;
+        position: relative;
+
+        .card {
+          @include Card;
+          background-color: $white;
+          border: 0.0625rem solid $grey;
+          border-radius: 0.5rem;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: space-between;
+          // row-gap: 1rem;
+          padding: 1.5rem;
+          aspect-ratio: 312 / 170;
+          height: 100%;
+          min-width: 19.5rem;
+          min-height: 10.625rem;
+          .icon {
+            // width: 4rem;
+            // height: 4rem;
+            display: flex;
+            column-gap: 1rem;
+            // align-items: center;
+            // justify-content: center;
+          }
+
+          h4 {
+            @include Heading4;
+            width: 100%;
+          }
+          p {
+            @include BodyText2;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .footer {
+      width: 100%;
+      p {
+        @include BodyText2;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+
+  .tree {
+    position: absolute;
+    bottom: -10%;
+    left: 0%;
+    width: 15%;
+  }
+  .pacman {
+    position: absolute;
+    top: 30%;
+    right: 0%;
+    width: 10%;
+  }
+}
+
+.section_8 {
+  position: relative;
+  background-color: $offWhite;
+}
