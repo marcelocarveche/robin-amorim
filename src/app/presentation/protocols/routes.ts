@@ -11,5 +11,9 @@ export const Routes = {
       title:
         'Revamping e-commerce experience \nbrings back pre-pandemic revenue',
     },
+    aiPoweredUX: {
+      url: '/case-studies/ai-powered-ux',
+      title: 'AI-Powered UX: \nEnhancing User Experience with AI',
+    },
   },
 }

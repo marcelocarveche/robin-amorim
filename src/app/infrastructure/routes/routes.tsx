@@ -1,8 +1,11 @@
 import { Route, Routes as Router } from 'react-router-dom'
 import HomePage from '@/app/presentation/pages/home/home'
-import { Teste } from '@/app/presentation/pages/case-studies/teste'
 import { Routes } from '@/app/presentation/protocols'
-import { ReducingTeacherWorkload, Ecommerce } from '@/app/presentation/pages'
+import {
+  ReducingTeacherWorkload,
+  Ecommerce,
+  AIPoweredUX,
+} from '@/app/presentation/pages'
 
 const AppRoutes = () => {
   return (
@@ -14,6 +17,10 @@ const AppRoutes = () => {
         element={<ReducingTeacherWorkload />}
       />
       <Route path={Routes.caseStudies.ecommerce.url} element={<Ecommerce />} />
+      <Route
+        path={Routes.caseStudies.aiPoweredUX.url}
+        element={<AIPoweredUX />}
+      />
     </Router>
   )
 }

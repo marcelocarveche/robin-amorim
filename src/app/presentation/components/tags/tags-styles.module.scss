@@ -40,6 +40,11 @@
     color: $black;
     background-color: $yellowDefault;
   }
+  .greenTag {
+    @include Tag;
+    color: $white;
+    background-color: $greenDefault;
+  }
 }
 
 @media (max-width: 60rem) {
