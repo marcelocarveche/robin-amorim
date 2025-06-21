@@ -54,7 +54,7 @@
         z-index: 2;
         width: 100%;
         position: absolute;
-        @include Card;
+        padding: 0;
         img {
           width: 100%;
         }
