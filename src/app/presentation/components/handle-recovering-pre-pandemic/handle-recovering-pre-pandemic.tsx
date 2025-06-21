@@ -41,7 +41,6 @@ export const HandleRecoveringPrePandemic: React.FC<Props> = ({ ...props }) => {
           </div>
         ) : (
           <div className={styles.body}>
-            <Images />
             <div className={styles.content}>
               <div className={styles.body}>
                 <p>STARTUP - SASS</p>
@@ -55,6 +54,7 @@ export const HandleRecoveringPrePandemic: React.FC<Props> = ({ ...props }) => {
                 <Button onClick={onClickButton}>See Case Study</Button>
               </div>
             </div>
+            <Images />
           </div>
         )}
       </div>

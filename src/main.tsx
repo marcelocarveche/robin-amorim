@@ -5,6 +5,13 @@ import AppRoutes from '@/app/infrastructure/routes/routes'
 import GlobalProvider from '@/app/infrastructure/providers/global-provider'
 import { BrowserRouter } from 'react-router-dom'
 import { MobileProvider } from '@/app/infrastructure/providers/mobile-provider'
+import { FaviconManager } from '@/app/shared/utils'
+
+// Inicializar gerenciador de favicon dinâmico
+FaviconManager.init()
+
+// Expor para debug no console
+;(window as any).FaviconManager = FaviconManager
 
 const rootElement = document.getElementById('root')
 if (rootElement) {
