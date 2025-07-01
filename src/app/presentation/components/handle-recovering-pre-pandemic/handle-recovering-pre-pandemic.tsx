@@ -43,7 +43,7 @@ export const HandleRecoveringPrePandemic: React.FC<Props> = ({ ...props }) => {
           <div className={styles.body}>
             <div className={styles.content}>
               <div className={styles.body}>
-                <p>STARTUP - SASS</p>
+                <p>STARTUP - SAAS</p>
                 <h3>
                   Recovering pre-pandemic revenue by revamping <br />
                   e-commerce experience

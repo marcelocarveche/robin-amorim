@@ -175,10 +175,7 @@ export const Ecommerce: React.FC<Props> = ({ ...props }) => {
         <div className={styles.content}>
           <div className={styles.header}>
             <p>B2B2C - Startup</p>
-            <h1>
-              E-commerce redesign recovered <br />
-              96% of Pre‑Pandemic Revenue
-            </h1>
+            <h1>E-commerce redesign recovered 96% of Pre‑Pandemic Revenue</h1>
             <Tags
               tags={['web responsive', 'research', 'ux/ui design']}
               color={'yellow'}

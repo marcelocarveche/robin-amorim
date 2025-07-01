@@ -13,7 +13,7 @@ export const SkillsSection: React.FC<Props> = ({ ...props }) => {
       isCollapsed: true,
     },
     {
-      title: '02 Early - and Growth-Stage Startup Experience',
+      title: '02 Early- and Growth-Stage Startup Experience',
       description:
         'My 10 years in fast-paced startup taught me to iterate quickly, align cross-functional teams and keep user value front and center.',
       isCollapsed: true,

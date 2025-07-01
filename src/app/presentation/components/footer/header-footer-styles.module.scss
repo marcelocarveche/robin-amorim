@@ -2,7 +2,9 @@
 @use '../../styles/variables.module.scss' as *;
 
 .wrapper {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,11 +16,15 @@
   align-items: center;
   justify-content: center;
   padding: 0 6.25rem; // 100px
+  // position: fixed;
 
   &[data-footer='true'] {
     height: 8rem; // 165px
     border-bottom: none;
     border-top: $black 0.125rem solid;
+    position: static;
+    top: unset;
+    z-index: unset;
   }
   .content {
     display: flex;
