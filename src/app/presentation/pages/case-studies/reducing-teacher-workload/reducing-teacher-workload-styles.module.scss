@@ -3,6 +3,15 @@
 
 $maxWidth: 65rem;
 
+//  Ocultar o scroll
+section > * {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 .section_1 {
   padding: 6.25rem;
   .content {

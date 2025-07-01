@@ -85,7 +85,7 @@ export const ReducingTeacherWorkload: React.FC<Props> = ({ ...props }) => {
   const challengeComments: Array<Comment> = [
     {
       profile: <TeacherEliana />,
-      message: `“This is so much work!!${isMobile && '<br>'} I lost my entire weekend typing each child's text!”`,
+      message: `“This is so much work!!${isMobile ? '<br>' : ''} I lost my entire weekend typing each child's text!”`,
       author: 'Eliana, Teacher',
     },
     {
@@ -369,7 +369,10 @@ export const ReducingTeacherWorkload: React.FC<Props> = ({ ...props }) => {
         </div>
       </section>
       <section className={styles.section_8}>
-        <Navigation next={Routes.caseStudies.ecommerce} />
+        <Navigation
+          previous={Routes.caseStudies.aiPoweredUX}
+          next={Routes.caseStudies.ecommerce}
+        />
       </section>
     </>
   )

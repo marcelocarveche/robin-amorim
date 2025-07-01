@@ -5,12 +5,14 @@ type Props = {
   role?: string
   responsibilities?: string
   team?: string
+  ai: boolean
 } & React.HTMLAttributes<HTMLDivElement>
 
 export const Skills: React.FC<Props> = ({
   role = 'Lead UX/UI Designer',
   responsibilities = 'User Research . Wireframe . Prototype . Usability Test . Iteration . Alignment & Hand-off',
   team = 'Along with 1 Product Manager + 6 Developers',
+  ai = false,
   ...props
 }) => {
   return (
@@ -24,7 +26,7 @@ export const Skills: React.FC<Props> = ({
         {responsibilities}
       </p>
       <p className={styles.skill}>
-        <b>TEAM: </b>
+        <b>{ai ? 'AI TEAM: ' : 'TEAM: '}</b>
         {team}
       </p>
     </div>
