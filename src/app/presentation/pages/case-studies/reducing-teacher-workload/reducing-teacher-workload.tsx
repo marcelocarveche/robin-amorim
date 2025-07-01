@@ -129,7 +129,7 @@ export const ReducingTeacherWorkload: React.FC<Props> = ({ ...props }) => {
           <div className={styles.header}>
             <p>B2B2C - STARTUP</p>
             <div className={styles.title}>
-              <h1>Reducing Teacher Workload by 70% throught AI Design</h1>
+              <h1>Reducing Teacher Workload by 78% through AI Design</h1>
               <Tags tags={tags} color="blue" />
             </div>
           </div>
@@ -137,7 +137,7 @@ export const ReducingTeacherWorkload: React.FC<Props> = ({ ...props }) => {
             <Book />
           </div>
           <div className={styles.footer}>
-            <Skills />
+            <Skills ai={false} />
             <div className={styles.overview}>
               <h2>Overview</h2>
               <div className={styles.paragraphy}>

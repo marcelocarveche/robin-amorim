@@ -11,20 +11,20 @@ type Props = {} & React.HTMLAttributes<HTMLDivElement>
 export const HandleReducingWorkload: React.FC<Props> = ({ ...props }) => {
   const navigate = useNavigate()
   const onClick = () => {
-    navigate(Routes.caseStudies.aiPoweredUX.url)
+    navigate(Routes.caseStudies.reducingTeacherWorkload.url)
   }
   return (
     <div className={styles.container} {...props}>
       <div className={styles.content}>
         <div className={styles.description}>
           <div className={styles.text}>
-            <p>B2B - SAAS</p>
+            <p>STARTUP - SAAS</p>
             <h2>
-              AI-Powered UX: Rapid <br />
-              SaaS Dashboard Design
+              Reducing Teacher Workload <br />
+              by 78% through AI
             </h2>
             <Tags
-              tags={['PROMPT ENGINEERING', 'AI-PROTOTYPE', 'UX/UI']}
+              tags={['WEB RESPONSIVE', 'APP', 'RESEARCH', 'UX/UI DESIGN']}
               color={'grey'}
             />
           </div>
